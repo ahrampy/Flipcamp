@@ -1,5 +1,6 @@
 import React from 'react';
 // import Splash from './'
+import Nav from './nav/nav_container';
 import SignupContainer from './session/signup_container';
 import SigninContainer from './session/signin_container';
 import { Route, Switch} from 'react-router-dom';
@@ -7,6 +8,7 @@ import { Route, Switch} from 'react-router-dom';
 
 export default () => (
     <div>
+        <Route path='/' component={Nav}/>
         <Switch>
             {/* <Route path="/" component={Nav} /> */}
             

@@ -9,7 +9,7 @@ const receiveCurrentUser = currentUser => ({
 });
 
 const signoutCurrentUser = () => ({
-  type: SIGNOUT_CURRENT_USER,
+  type: SIGNOUT_CURRENT_USER
 });
 
 export const signup = user => dispatch => (
