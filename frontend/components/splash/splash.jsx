@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Splash = () => (
-    <h1>Home</h1>
+    <div className="splash-main"></div>
 )
 
 export default Splash;

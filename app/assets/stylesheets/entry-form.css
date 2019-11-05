@@ -1,0 +1,31 @@
+.entry-form {
+    margin-left: 30px;
+}
+
+.entry-form h2 {
+    margin-bottom: 15px;
+}
+
+.entry-form input {
+    font-size: medium;
+    border: 1px solid #F6C270;
+    border-radius: 2px;
+    padding: 5px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.entry-form button{
+    text-decoration: none;
+    color: #F6C270;
+    border: 1px solid #F6C270;
+    padding: 8px;
+    margin-top: 5px;
+    transition: 0.2s;
+    border-radius: 4px;
+}
+
+.entry-form button:hover {
+    color: white;
+    background: #F6C270;
+}
