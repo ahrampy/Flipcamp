@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Nav = ({ currentUser, signout }) => {
-    const display = currentUser ? (
+    const buttons = currentUser ? (
         <div>
             <button className='btn' onClick={signout}>Sign Out</button>
         </div>
@@ -27,7 +27,7 @@ const Nav = ({ currentUser, signout }) => {
                     </div>
                 </Link>
                 <div className='nav-buttons'>
-                    {display}
+                    {buttons}
                 </div>
             </div>
         </header>
