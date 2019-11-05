@@ -29,47 +29,54 @@ class EntryForm extends React.Component {
         let signups;
         if (this.props.formType === 'Sign Up') {
             signups = 
-            <div>
-                <label>First Name
+            <>
+                <label className='entry-form-input-field'>First Name
                     <input
                         type="text"
                         value={this.state.first_name}
                         onChange={this.handleInput('first_name')}
                     />
                 </label>
-                <label>Last Name
+                <label className='entry-form-input-field'>Last Name
                     <input
                         type="text"
                         value={this.state.last_name}
                         onChange={this.handleInput('last_name')}
                     />
                 </label >
-            </div > 
+            </ > 
         } else {
             signups = null;
         }
 
         return (
-            <div className="entry-form">
-                <h2>{this.props.formType}</h2>
-                <form>
-                    {signups}
-                    <label>Email
-                        <input
-                            type="text"
-                            value={this.state.email}
-                            onChange={this.handleInput('email')}
-                        />
-                    </label>
-                    <label>Password
-                        <input
-                            type="password"
-                            value={this.state.password}
-                            onChange={this.handleInput('password')}
-                        />
-                        <button type="submit" onClick={this.handleSubmit}>{this.props.formType}</button>
-                    </label>
-                </form>
+            <div className='entry-form-container'>
+                <div className='entry-form'>
+                    <h2>{this.props.formType}</h2>
+                    <form>
+                        {signups}
+                        <label className='entry-form-input-field'>Email
+                            <input
+                                type='text'
+                                value={this.state.email}
+                                onChange={this.handleInput('email')}
+                            />
+                        </label>
+                        <label className='entry-form-input-field'>Password
+                            <input
+                                type='password'
+                                value={this.state.password}
+                                onChange={this.handleInput('password')}
+                            />
+                            <div className='entry-form-button-container'>
+                            <button
+                                type='submit'
+                                onClick={this.handleSubmit}>{this.props.formType}
+                            </button>
+                            </div>
+                        </label>
+                    </form>
+                </div>
             </div>
         );
     }

@@ -1,9 +1,24 @@
-.entry-form {
-    margin-left: 30px;
+.entry-form-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    height: 500px;
+}
+
+.entry-form form {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    width: 200px;
 }
 
 .entry-form h2 {
-    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    font-size: 25px;
+    margin-top: 130px;
+    margin-bottom: 20px;
 }
 
 .entry-form input {
@@ -12,10 +27,20 @@
     border-radius: 2px;
     padding: 5px;
     margin-top: 5px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
-.entry-form button{
+.entry-form-input-field {
+    margin-left: 15px;
+}
+
+.entry-form-button-container {
+    display: flex;
+    justify-content: center;
+    margin-left: -15px;
+}
+
+.entry-form button {
     text-decoration: none;
     color: #F6C270;
     border: 1px solid #F6C270;
