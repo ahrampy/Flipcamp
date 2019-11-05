@@ -9,24 +9,26 @@ const Nav = ({ currentUser, signout }) => {
     ) : (
             <>
                 <Link to='/signup'>
-                    <button className='btn'>Sign Up</button>
+                    <button className='btn' id='sign-up-btn'>Sign Up</button>
                 </Link>
                 <Link to='/signin'>
-                    <button className='btn'>Sign In</button>
+                    <button className='btn' id='sign-in-btn'>Sign In</button>
                 </Link>
             </>
         );
     return (
-        <header className='nav-bar'>
-            <Link to='/' style={{ textDecoration: 'none' }}>
-                <div className='nav-logos'>
-                    <img className='nav-logo-img' src={ window.tent } />
-                    <br/>
-                    <h1 className='nav-logo-name'>Flipcamp</h1>
+        <header className='nav-bar-container'>
+            <div className='nav-bar'>
+                <Link to='/' style={{ textDecoration: 'none' }}>
+                    <div className='nav-logos'>
+                        <img className='nav-logo-img' src={ window.tent } />
+                        <br/>
+                        <h1 className='nav-logo-name'>Flipcamp</h1>
+                    </div>
+                </Link>
+                <div className='nav-buttons'>
+                    {display}
                 </div>
-            </Link>
-            <div className='nav-buttons'>
-                {display}
             </div>
         </header>
     )

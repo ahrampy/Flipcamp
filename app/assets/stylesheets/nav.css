@@ -1,3 +1,11 @@
+.nav-bar-container {
+    background: #F6F1EE;
+    position: fixed;
+    height: 80px;
+    width: 100%;
+    transition: 0.2s;
+}
+
 .nav-bar {
     font-family: inherit;
     display: flex;
@@ -35,9 +43,10 @@
 .nav-bar .btn{
     text-decoration: none;
     color: #F6C270;
-    border: 1px solid #F6C270;
+    border: 0px solid #F6C270;
     padding: 8px;
-    margin: 5px;
+    margin-top: 0px;
+    margin-left: 10px;
     transition: 0.2s;
     border-radius: 4px;
 }
