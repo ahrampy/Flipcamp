@@ -8,8 +8,12 @@ const Nav = ({ currentUser, signout }) => {
         </div>
     ) : (
             <>
-                <Link className='btn' to='/signup'>Sign Up</Link>
-                <Link className='btn' to='/signin'>Sign In</Link>
+                <Link to='/signup'>
+                    <button className='btn'>Sign Up</button>
+                </Link>
+                <Link to='/signin'>
+                    <button className='btn'>Sign In</button>
+                </Link>
             </>
         );
     return (

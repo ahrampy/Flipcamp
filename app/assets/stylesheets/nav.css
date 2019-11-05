@@ -19,7 +19,7 @@
 }
 
 .nav-buttons {
-    margin: 10px;
+    margin: 0px;
 }
 
 .nav-logo-img {
@@ -45,9 +45,4 @@
 .nav-bar .btn:hover {
     color: white;
     background: #F6C270;
-}
-
-.nav-bar button {
-    margin: 0px;
-    padding: 0px;
 }
