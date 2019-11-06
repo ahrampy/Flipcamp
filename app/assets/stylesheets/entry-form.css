@@ -11,7 +11,8 @@
     display: flex;
     flex-direction: column;
     align-content: center;
-    width: 200px;
+    width: 100%;
+ 
 }
 
 .entry-form h2 {
@@ -37,7 +38,7 @@
 }
 
 .entry-form-input-field {
-    margin-left: 5px;
+    margin-left: 10px;
 }
 
 .entry-form-button-container {
@@ -46,17 +47,18 @@
     align-items: center;
 }
 
-.entry-form button {
+.entry-form-sign-button {
     text-decoration: none;
     color: #F6C270;
     border: 1px solid #F6C270;
     padding: 18px 20px;
-    width: 100%;
-    margin-top: 0px;
+    width: 95%;
+    margin-top: 15px;
+    margin-right: 15px;
     transition-duration: 0.4s;
 }
 
-.entry-form button:hover {
+.entry-form-sign-button:hover {
     color: white;
     background: #F6C270;
 }
@@ -78,11 +80,11 @@
 
 #entry-form-switch-button:hover {
     text-decoration: underline;
-    color: #F6C270;
-    background: white;
 }
+
+
 
 .entry-form-demo-button-container {
     margin-top: 15px;
-    
+    margin-left: -10px;   
 }
