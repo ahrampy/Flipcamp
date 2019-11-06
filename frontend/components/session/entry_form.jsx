@@ -28,7 +28,8 @@ class EntryForm extends React.Component {
 
     handleDemo(e) {
         this.setState({email: 'demo', password: '123456'})
-        this.handleSubmit(e);
+        this.props.action({ email: 'demo', password: '123456' })
+            .then(this.props.closeModal)
     }
 
     render() {
