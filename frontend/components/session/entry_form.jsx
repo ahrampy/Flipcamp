@@ -61,6 +61,7 @@ class EntryForm extends React.Component {
                 <div className='entry-form-demo-button-container'>  
                 <button
                     className='entry-form-sign-button'
+                    id='entry-form-demo-button'
                     onClick={this.handleDemo}>Demo
                 </button>
             </div> 
