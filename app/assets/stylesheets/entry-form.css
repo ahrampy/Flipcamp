@@ -2,7 +2,9 @@
     display: flex;
     width: 100%;
     justify-content: center;
-    height: 500px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.25);
+    margin-top: 130px;
+    padding: 20px;
 }
 
 .entry-form form {
@@ -17,27 +19,31 @@
     justify-content: center;
     margin: 20px;
     font-size: 25px;
-    margin-top: 130px;
     margin-bottom: 20px;
+}
+
+.entry-form h3 {
+    font-size: 15px;
 }
 
 .entry-form input {
     font-size: medium;
     border: 1px solid #F6C270;
     border-radius: 2px;
-    padding: 5px;
+    padding: 10px;
     margin-top: 5px;
     margin-bottom: 15px;
 }
 
 .entry-form-input-field {
-    margin-left: 15px;
+    margin-left: 5px;
 }
 
 .entry-form-button-container {
     display: flex;
-    justify-content: center;
-    margin-left: -15px;
+    flex-direction: column;
+    align-items: center;
+   margin-left: -5px;
 }
 
 .entry-form button {
@@ -53,4 +59,30 @@
 .entry-form button:hover {
     color: white;
     background: #F6C270;
+}
+
+.entry-form-switch-button-container {
+    display: flex;
+    justify-content: center;
+    margin-left: -5px;
+}
+
+#entry-form-switch-button {
+    color: #F6C270;
+    border: none;
+    padding: 4px;
+    margin-top: 15px;
+    transition: 0.2s;
+    border-radius: 4px;
+}
+
+#entry-form-switch-button:hover {
+    text-decoration: underline;
+    color: #F6C270;
+    background: white;
+}
+
+.entry-form-demo-button-container {
+    margin-top: 10px;
+    
 }
