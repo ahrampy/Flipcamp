@@ -11,6 +11,7 @@ class EntryForm extends React.Component {
         };
 
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleDemo = this.handleDemo.bind(this);
     }
 
     handleInput(type) {
@@ -22,7 +23,12 @@ class EntryForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         this.props.action(this.state)
-        .then(() => this.props.history.push('/'))
+            .then(this.props.closeModal)
+    }
+
+    handleDemo(e) {
+        this.setState({email: 'demo', password: '123456'})
+        this.handleSubmit(e);
     }
 
     render() {
@@ -48,6 +54,18 @@ class EntryForm extends React.Component {
         } else {
             signups = null;
         }
+        let demoButton;
+        if (this.props.formType === 'Sign In') {
+            demoButton = 
+            <>  
+                <button
+                    className='entry-form-demo-button'
+                    onClick={this.handleDemo}>Demo User
+                </button>
+            </> 
+        } else {
+            demoButton = null;
+        }
 
         return (
             <div className='entry-form-container'>
@@ -70,12 +88,15 @@ class EntryForm extends React.Component {
                             />
                             <div className='entry-form-button-container'>
                             <button
+                                className='entry-form-sign-button'
                                 type='submit'
                                 onClick={this.handleSubmit}>{this.props.formType}
                             </button>
+                            {demoButton}
                             </div>
                         </label>
                     </form>
+                    <h3>{this.props.otherForm} instead</h3>
                 </div>
             </div>
         );

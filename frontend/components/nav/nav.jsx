@@ -1,37 +1,46 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Nav = ({ currentUser, signout }) => {
-    const buttons = currentUser ? (
-        <div>
-            <button className='btn' onClick={signout}>Sign Out</button>
-        </div>
-    ) : (
-            <>
-                <Link to='/signup'>
-                    <button className='btn' id='sign-up-btn'>Sign Up</button>
-                </Link>
-                <Link to='/signin'>
-                    <button className='btn' id='sign-in-btn'>Sign In</button>
-                </Link>
-            </>
-        );
-    return (
-        <header className='nav-bar-container'>
-            <div className='nav-bar'>
-                <Link to='/' style={{ textDecoration: 'none' }}>
-                    <div className='nav-logos'>
-                        <img className='nav-logo-img' src={ window.tent } />
-                        <br/>
-                        <h1 className='nav-logo-name'>Flipcamp</h1>
-                    </div>
-                </Link>
-                <div className='nav-buttons'>
-                    {buttons}
-                </div>
+class Nav extends React.Component {
+    constructor(props) {
+        super(props)
+    }
+
+    render () {
+        const { signout, currentUser, openModal } = this.props;
+
+        let buttons = currentUser ? (
+            <div>
+                <button className='btn' onClick={signout}>Sign Out</button>
             </div>
-        </header>
-    )
+        ) : (
+            <>
+                    <button className='btn' onClick={() => openModal('signin')}>
+                        Sign In
+                    </button>
+
+                    <button className='btn' onClick={() => openModal('signup')}>
+                        Sign Up
+                    </button>
+            </>
+            );
+        return (
+            <header className='nav-bar-container'>
+                <div className='nav-bar'>
+                    <Link to='/' style={{ textDecoration: 'none' }}>
+                        <div className='nav-logos'>
+                            <img className='nav-logo-img' src={ window.tent } />
+                            <br/>
+                            <h1 className='nav-logo-name'>Flipcamp</h1>
+                        </div>
+                    </Link>
+                    <div className='nav-buttons'>
+                        {buttons}
+                    </div>
+                </div>
+            </header>
+        )
+    }
 }
 
 export default Nav;
