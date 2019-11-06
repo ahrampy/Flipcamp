@@ -57,12 +57,12 @@ class EntryForm extends React.Component {
         let demoButton;
         if (this.props.formType === 'Sign In') {
             demoButton = 
-            <>  
+                <div className='entry-form-demo-button-container'>  
                 <button
                     className='entry-form-demo-button'
                     onClick={this.handleDemo}>Demo User
                 </button>
-            </> 
+            </div> 
         } else {
             demoButton = null;
         }
@@ -96,7 +96,9 @@ class EntryForm extends React.Component {
                             </div>
                         </label>
                     </form>
-                    <h3>{this.props.otherForm} instead</h3>
+                    <div className='entry-form-switch-button-container'>
+                        <h3>{this.props.otherForm} instead</h3>
+                    </div>
                 </div>
             </div>
         );
