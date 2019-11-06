@@ -8,10 +8,7 @@
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
     <%= favicon_link_tag asset_path('tent.png') %>
-    <script type="text/javascript">
-      window.tent = "<%= image_url('tent.png') %>"
-    </script>
-    
+
   </head>
     <% if current_user %>
         <script>

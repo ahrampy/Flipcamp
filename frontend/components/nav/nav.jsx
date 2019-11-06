@@ -29,9 +29,8 @@ class Nav extends React.Component {
                 <div className='nav-bar'>
                     <Link to='/' style={{ textDecoration: 'none' }}>
                         <div className='nav-logos'>
-                            <img className='nav-logo-img' src={ window.tent } />
-                            <br/>
-                            <h1 className='nav-logo-name'>Flipcamp</h1>
+                            <img className='nav-logo-name' src='/logo.png'>
+                            </img>
                         </div>
                     </Link>
                     <div className='nav-buttons'>
