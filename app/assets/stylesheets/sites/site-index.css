@@ -22,8 +22,8 @@
 }
 
 .index-site-tile:hover {
-    background-color: rgb(242, 235, 233);
-    transition: .2s;
+    background-color: rgb(235, 229, 227);
+    transition: .3s;
 }
 
 .site-tile-img-container {
