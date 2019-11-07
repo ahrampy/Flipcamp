@@ -12,8 +12,6 @@ export default () => (
         <Nav />
         <Route exact path='/' component={Splash} />
         <Route exact path='/sites/:siteId' component={SiteShow} />
-        <div className='footer'>
-            <img src='/trees-footer.png' alt='trees' />
-        </div>
+        <div className='footer'></div>
     </div>
 );

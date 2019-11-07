@@ -1,9 +1,10 @@
 .nav-bar-container {
     background: #F6F1EE;
     position: fixed;
-    height: 75px;
+    max-height: 75px;
     width: 100%;
     transition: 0.2s;
+    overflow: hidden;
 }
 
 .nav-bar {
