@@ -1,0 +1,25 @@
+.site-show-container {
+    display: flex;
+
+}
+
+.site-show-img_container {
+    height: 800px;
+    width: 100%;
+}
+
+.site-show-title h2 {
+    font-size: 35px;
+}
+
+.site-show-site_type {
+
+}
+
+.site-show-cost {
+
+}
+
+.site-show-max_guests {
+    
+}

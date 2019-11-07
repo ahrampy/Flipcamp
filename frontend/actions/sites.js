@@ -9,10 +9,12 @@ export const receiveSites = sites => ({
     sites,
 });
 
-export const receiveSite = site => ({
-    type: RECEIVE_SITE,
-    site
-});
+export const receiveSite = site => {
+    return (
+        {type: RECEIVE_SITE,
+        site}
+    )
+};
 
 export const removeSite = siteId => ({
     type: REMOVE_SITE,

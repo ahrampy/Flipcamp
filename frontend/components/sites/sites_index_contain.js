@@ -1,10 +1,12 @@
 import { connect } from 'react-redux';
 import { fetchSites, createSite } from '../../actions/sites';
-import SiteIndex from './site_index_pres';
+import SiteIndex from './sites_index_pres';
 
-const mSTP = state => ({
-    sites: Object.values(state.entities.sites)
-});
+const mSTP = state => {
+    return ({
+        sites: Object.values(state.entities.sites)
+    })
+};
 
 const mDTP = dispatch => ({
     fetchSites: () => dispatch(fetchSites()),
