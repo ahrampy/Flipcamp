@@ -21,14 +21,18 @@ class SiteIndex extends React.Component {
                             </Link>
                         </div>
                         <div className='index-site-info'>
-                            <div className='index-site-info-title'>
-                                <h4>{site.title}</h4>
+                            <div className='index-site-info-description'>
+                                <div className='index-site-info-title'>
+                                    <h4>{site.title}</h4>
+                                </div>
+                                <div className='index-site-info-site-type'>
+                                    <p>{site.site_type}</p>
+                                </div>
                             </div>
-                            <div className='index-site-info-site-type'>
-                                <p>{site.site_type}</p>
-                            </div>
-                            <div className='index-site-info-cost'>
-                                <p>{site.cost}</p>
+                            <div className='index-site-info-specs'>
+                                <div className='index-site-info-cost'>
+                                    <p>${site.cost} / night</p>
+                                </div>
                             </div>
                         </div>
                     </div>
