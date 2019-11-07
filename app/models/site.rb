@@ -1,6 +1,7 @@
 class Site < ApplicationRecord
 
-    validates :user_id, :title, :lat, :lng, :type, :cost, :max_guests, prensence: true
+    validates :user_id, :title, :lat, :lng,
+        :site_type, :cost, :max_guests, presence: true
 
     belongs_to :user
 

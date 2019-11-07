@@ -1,5 +1,6 @@
-// import { combineReducers } from 'redux';
+import { combineReducers } from 'redux';
+import sitesReducer from './sites';
 
-// export default combineReducers({
-    
-// });
+export default combineReducers({
+    sites: sitesReducer
+});

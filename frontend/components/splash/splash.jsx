@@ -1,11 +1,10 @@
 import React from 'react';
+import SiteIndex from '../sites/sites_index_contain';
 
 const Splash = () => (
     <div className="splash-main">
-        <div className="search-bar-container">
-            <div className="search-bar">
-                <input type="search" className="search-bar-input"/>
-            </div>
+        <div className='splash-site-index'>
+            <SiteIndex/>
         </div>
     </div>
 )
