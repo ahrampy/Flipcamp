@@ -3,6 +3,7 @@ import { fetchSite, deleteSite } from '../../actions/sites';
 import SiteShow from './site_show_pres';
 
 const mSTP = (state, ownProps) => {
+
     return (
         { site: state.entities.sites[ownProps.match.params.siteId] }
     )

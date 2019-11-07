@@ -10,7 +10,8 @@ import {
         case RECEIVE_SITES:
             return Object.assign({}, oldState, action.sites);
         case RECEIVE_SITE:
-            return Object.assign({}, oldState, action.site);
+            const newSite = { [action.site.site.id]: action.site.site };
+            return Object.assign({}, oldState, newSite);
         case REMOVE_SITE:
             const newState = Object.assign({}, oldState)
             delete(newState[action.siteId])
