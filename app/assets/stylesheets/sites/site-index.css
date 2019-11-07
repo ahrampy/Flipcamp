@@ -1,0 +1,37 @@
+.index-sites {
+    display: grid;
+    justify-content: space-around;
+    padding: 150px 100px 40px 100px;
+    grid-template-columns: 250px 250px 250px;
+    grid-column-gap: 20px;
+    grid-row-gap: 50px;
+
+}
+
+.index-sites-site {
+    border-radius: 5px;
+    height: 200px;
+    width: 300px;
+    background-position: center center;
+    border-radius: 5px;
+    background-color: #F6F1EE;
+    box-shadow: 2px 2px 10px 1px #d3d3d3;
+}
+
+.index-sites-site-img-container {
+    display: block;
+    max-width: 300px;
+    max-height: 150px;
+    min-height: 150px;
+    overflow: hidden;
+}
+
+.index-sites-site-img {
+    border-radius: 5px;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.index-site-info-title h4 {
+    font-size: 25px;
+}

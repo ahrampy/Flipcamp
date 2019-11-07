@@ -1,5 +1,8 @@
 .footer {
-    display: flex;
+    background-image: url(/trees-footer.png);
+    background-repeat: repeat-x;
+    background-position: -15px 5px; 
+    height: 250px;
     justify-content: center;
     position: absolute;
     width: 100%;

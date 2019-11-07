@@ -14,13 +14,15 @@ class SiteIndex extends React.Component {
         return (
             <div className='index-sites'> {
                 this.props.sites.map(site => (
-                    <div className='index-sites-site'>
-                        <Link to={`/sites/${site.id}`}>{
-                            <img src={site.img} alt=""/> 
-                            }</Link>
+                    <div key={site.id} className='index-sites-site'>
+                        <div className='index-sites-site-img-container'>
+                            <Link to={`/sites/${site.id}`}>
+                                {<img className='index-sites-site-img' src={site.img} alt=""/>} 
+                            </Link>
+                        </div>
                         <div className='index-site-info'>
                             <div className='index-site-info-title'>
-                                <p>{site.title}</p>
+                                <h4>{site.title}</h4>
                             </div>
                             <div className='index-site-info-site-type'>
                                 <p>{site.site_type}</p>
