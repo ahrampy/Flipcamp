@@ -27,7 +27,7 @@ class Nav extends React.Component {
         return (
             <header className='nav-bar-container'>
                 <div className='nav-bar'>
-                    <Link to='/' style={{ textDecoration: 'none' }}>
+                    <Link to='/' style={{ textDecoration: 'none' }, { outline : 'none' }}>
                         <div className='nav-logos'>
                             <img className='nav-logo-name' src='/logo.png'>
                             </img>

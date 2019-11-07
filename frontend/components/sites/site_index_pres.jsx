@@ -14,27 +14,28 @@ class SiteIndex extends React.Component {
         return (
             <div className='index-sites'> {
                 this.props.sites.map(site => (
-                    <div key={site.id} className='index-sites-site'>
-                        <div className='index-sites-site-img-container'>
-                            <Link to={`/sites/${site.id}`}>
-                                {<img className='index-sites-site-img' src={site.img} alt=""/>} 
-                            </Link>
-                        </div>
-                        <div className='index-site-info'>
-                            <div className='index-site-info-description'>
-                                <div className='index-site-info-title'>
-                                    <h4>{site.title}</h4>
+                    <div key={site.id} className='index-site-tile'>
+                        <Link to={`/sites/${site.id}`}
+                            style={{ textDecoration: 'none' }}>
+                            <div className='site-tile-img-container'>
+                                    {<img className='site-tile-img' src={site.img} alt=""/>}
+                            </div>
+                            <div className='site-tile-info'>
+                                <div className='site-tile-info-description'>
+                                    <div className='site-tile-info-title'>
+                                        <h4>{site.title}</h4>
+                                    </div>
+                                    <div className='site-tile-info-site-type'>
+                                        <p>{site.site_type}</p>
+                                    </div>
                                 </div>
-                                <div className='index-site-info-site-type'>
-                                    <p>{site.site_type}</p>
+                                <div className='site-tile-info-specs'>
+                                    <div className='site-tile-info-cost'>
+                                        <p>${site.cost} / night</p>
+                                    </div>
                                 </div>
                             </div>
-                            <div className='index-site-info-specs'>
-                                <div className='index-site-info-cost'>
-                                    <p>${site.cost} / night</p>
-                                </div>
-                            </div>
-                        </div>
+                        </Link>
                     </div>
                 ))
             }

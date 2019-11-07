@@ -1,14 +1,13 @@
 .index-sites {
     display: grid;
     justify-content: space-around;
-    padding: 150px 100px 40px 100px;
-    grid-template-columns: 250px 250px 250px;
+    padding: 150px 150px 40px 150px;
+    grid-template-columns: 300px 300px 300px;
     grid-column-gap: 20px;
     grid-row-gap: 50px;
-
 }
 
-.index-sites-site {
+.index-site-tile {
     border-radius: 5px;
     height: 250px;
     width: 300px;
@@ -18,44 +17,48 @@
     box-shadow: 2px 2px 10px 1px #D3D3D3;
 }
 
-.index-sites-site:hover {
+.site-tile-link a {
+    text-decoration: none;
+}
+
+.index-site-tile:hover {
     background-color: rgb(242, 235, 233);
     transition: .2s;
 }
 
-.index-sites-site-img-container {
-    display: block;
+.site-tile-img-container {
+    position: relative;
     max-width: 300px;
     max-height: 150px;
     min-height: 150px;
     overflow: hidden;
 }
 
-.index-sites-site-img {
+.site-tile-img {
     border-radius: 5px;
     max-width: 100%;
     max-height: 100%;
 }
 
-.index-site-info {
+.site-tile-info {
     display: flex;
     flex-direction: column;
     color: #333333;
     transition: .2s;
 }
 
-.index-site-info-description {
+.site-tile-info-description {
     display: flex;
     justify-content: space-between;
     padding: 15px;
 }
 
-.index-site-info-specs {
+.site-tile-info-specs {
     display: flex;
     justify-content: space-between;
     padding: 15px;
 }
 
-.index-site-info-title h4 {
+.site-tile-info-title h4 {
     font-size: 25px;
 }
