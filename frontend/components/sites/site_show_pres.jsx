@@ -11,11 +11,13 @@ class SiteShow extends React.Component {
 
     render () {
 
-        const { title, site_type, cost, max_guests } = this.props.site
+        const { title, site_type, cost, max_guests, img } = this.props.site
         
         return (
             <div className='site-show-container'>
-                <img src="" alt=""/>
+                <div className='site-show-img_container'>
+                    <img src={img} alt="site_picture"/>
+                </div>
                 <div className='site-show-title'>
                     {title}
                 </div>
