@@ -35,7 +35,7 @@ class EntryForm extends React.Component {
 
     // handleErrors(type) {
     //     if (this.props.error.includes(type)) {
-
+                // type will be error names
     //     }
     // }
 
