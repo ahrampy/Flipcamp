@@ -21,20 +21,37 @@ class SiteShow extends React.Component {
 
         return (
             <div className='site-show-container'>
-                <div className='site-show-img_container'>
-                    <img src={img} alt="site_picture"/>
+                <div className='site-show-img-container'>
+                    <div className='site-show-img'>
+                        <img src={img} alt="site-picture"/>
+                    </div>
                 </div>
-                <div className='site-show-title'>
-                    <h2>{title}</h2>
+                <div className='site-show-info-container'>
+                    <div className='site-show-info-title'>
+                        <h2>{title}</h2>
+                    </div>
                 </div>
-                <div className='site-show-site_type'>
+                {/* <div className='site-show-site-type'>
                     <p>{site_type}</p>
-                </div>
-                <div className='site-show-cost'>
-                    <p>{cost}</p>
-                </div>
-                <div className='site-show-max_guests'>
-                    <p>{max_guests}</p>
+                </div> */}
+                <div className='site-show-widget-container'>
+                    <div className='site-show-widget'>
+                        <div className='site-show-widget-top-container'>
+                            <div className='site-show-widget-top-content'>
+                                <div className='site-show-cost'>
+                                    <h4>${cost}</h4>
+                                    <p>per night</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className='site-show-widget-bottom-container'>
+                            <div className='site-show-widget-bottom-content'>
+                                <div className='site-show-max-guests'>
+                                    <p>{max_guests}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         )
