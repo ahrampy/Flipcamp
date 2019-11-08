@@ -4,7 +4,8 @@ import { signin } from '../../actions/session';
 import EntryForm from './entry_form';
 import { openModal, closeModal } from '../../actions/modal';
 
-const mapStateToProps = () => ({
+const mapStateToProps = (state) => ({
+    errors: state.errors,
     formType: 'Sign In'
 })
 
