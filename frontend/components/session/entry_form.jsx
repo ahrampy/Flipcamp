@@ -12,6 +12,7 @@ class EntryForm extends React.Component {
 
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleDemo = this.handleDemo.bind(this);
+        this.renderErrors = this.renderErrors.bind(this);
     }
 
     handleInput(type) {
@@ -32,6 +33,24 @@ class EntryForm extends React.Component {
             .then(this.props.closeModal)
     }
 
+    // handleErrors(type) {
+    //     if (this.props.error.includes(type)) {
+
+    //     }
+    // }
+
+    renderErrors() {
+        return (
+            <ul>
+                {this.props.errors.map((error, i) => (
+                    <li key={`error-${i}`}>
+                        • {error}
+                    </li>
+                ))}
+            </ul>
+        );
+    }
+
     render() {
         let signups;
         if (this.props.formType === 'Sign Up') {
@@ -42,6 +61,7 @@ class EntryForm extends React.Component {
                         type="text"
                         value={this.state.first_name}
                         onChange={this.handleInput('first_name')}
+                        required
                     />
                 </label>
                 <label className='entry-form-input-field'>Last Name
@@ -49,6 +69,7 @@ class EntryForm extends React.Component {
                         type="text"
                         value={this.state.last_name}
                         onChange={this.handleInput('last_name')}
+                        required
                     />
                 </label >
             </ > 
@@ -73,21 +94,29 @@ class EntryForm extends React.Component {
             <div className='entry-form-container'>
                 <div className='entry-form'>
                     <h2>{this.props.formType}</h2>
-                    <form>
-                        {signups}
-                        <label className='entry-form-input-field'>Email
-                            <input
-                                type='text'
-                                value={this.state.email}
-                                onChange={this.handleInput('email')}
-                            />
-                        </label>
-                        <label className='entry-form-input-field'>Password
-                            <input
-                                type='password'
-                                value={this.state.password}
-                                onChange={this.handleInput('password')}
-                            />
+                        <form>
+                            <div className='entry-form-input-container'>
+                                {signups}
+                                <label className='entry-form-input-field'>Email
+                                    <input
+                                        type='text'
+                                        value={this.state.email}
+                                        onChange={this.handleInput('email')}
+                                        required
+                                    />
+                                </label>
+                                <label className='entry-form-input-field'>Password
+                                    <input
+                                        type='password'
+                                        value={this.state.password}
+                                        onChange={this.handleInput('password')}
+                                        required
+                                    />
+                                </label>
+                            </div>
+                            <div className='entry-form-errors'>
+                                {this.renderErrors()}
+                            </div>
                             <div className='entry-form-button-container'>
                             <button
                                 className='entry-form-sign-button'
@@ -96,8 +125,7 @@ class EntryForm extends React.Component {
                             </button>
                             {demoButton}
                             </div>
-                        </label>
-                    </form>
+                        </form>
                     <div className='entry-form-switch-button-container'>
                         <h3>{this.props.otherForm} instead</h3>
                     </div>

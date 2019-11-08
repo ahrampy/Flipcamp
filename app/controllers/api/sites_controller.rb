@@ -14,7 +14,7 @@ class Api::SitesController < ApplicationController
         if @site.save
             render :show
         else
-            render json: ['Please fill out all fields with the correct input types']
+            render json: ['Incorrect email/password'], status: 401
         end
     end
 

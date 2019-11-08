@@ -6,7 +6,7 @@ class Api::UsersController < ApplicationController
             signin(@user)
             render "api/users/show"
         else
-            render json: ["Invalid username/password combination"], status: 401
+            render json: @user.errors.full_messages, status: 422
         end
     end
 
