@@ -21,6 +21,10 @@
     overflow: hidden;
 }
 
+.site-show-main {
+    display: flex;
+}
+
 .site-show-widget-container {
     display: inline-block;
     position: relative;
@@ -79,6 +83,7 @@
 
 .site-show-info-title h2 {
     font-size: 35px;
+    padding: 20px;
 }
 
 .site-show-cost {

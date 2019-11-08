@@ -26,28 +26,30 @@ class SiteShow extends React.Component {
                         <img src={img} alt="site-picture"/>
                     </div>
                 </div>
-                <div className='site-show-info-container'>
-                    <div className='site-show-info-title'>
-                        <h2>{title}</h2>
+                <div className='site-show-main'>
+                    <div className='site-show-info-container'>
+                        <div className='site-show-info-title'>
+                            <h2>{title}</h2>
+                        </div>
                     </div>
-                </div>
-                {/* <div className='site-show-site-type'>
-                    <p>{site_type}</p>
-                </div> */}
-                <div className='site-show-widget-container'>
-                    <div className='site-show-widget'>
-                        <div className='site-show-widget-top-container'>
-                            <div className='site-show-widget-top-content'>
-                                <div className='site-show-cost'>
-                                    <h4>${cost}</h4>
-                                    <p>per night</p>
+                    {/* <div className='site-show-site-type'>
+                        <p>{site_type}</p>
+                    </div> */}
+                    <div className='site-show-widget-container'>
+                        <div className='site-show-widget'>
+                            <div className='site-show-widget-top-container'>
+                                <div className='site-show-widget-top-content'>
+                                    <div className='site-show-cost'>
+                                        <h4>${cost}</h4>
+                                        <p>per night</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div className='site-show-widget-bottom-container'>
-                            <div className='site-show-widget-bottom-content'>
-                                <div className='site-show-max-guests'>
-                                    <p>{max_guests}</p>
+                            <div className='site-show-widget-bottom-container'>
+                                <div className='site-show-widget-bottom-content'>
+                                    <div className='site-show-max-guests'>
+                                        {/* <p>{max_guests}</p> */}
+                                    </div>
                                 </div>
                             </div>
                         </div>
