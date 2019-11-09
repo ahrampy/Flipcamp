@@ -7,15 +7,16 @@ class SiteShow extends React.Component {
 
     componentDidMount() {
         if (!this.props.site) {
-            
             this.props.fetchSite(this.props.match.params.siteId);
         };
+        if (!this.props.bookings) {
+            this.props.fetchBookings();
+        }
     };
 
     render () {
         
         if (!this.props.site) {
-            
             return null;
         }
 

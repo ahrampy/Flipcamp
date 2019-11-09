@@ -31,6 +31,6 @@ export const fetchBookings = () => (
 export const fetchSiteBookings = siteId => (
     $.ajax({
         method: 'GET',
-        url: ''
+        url: `api/sites/${siteId}/bookings`,
     })
 )

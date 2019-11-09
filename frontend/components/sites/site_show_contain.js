@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { fetchSite, deleteSite } from '../../actions/sites';
-import {  } from '../../actions/bookings';
+import { fetchBookings, fetchSiteBookings } from '../../actions/bookings';
 import SiteShow from './site_show_pres';
 
 const mSTP = (state, ownProps) => {
@@ -18,7 +18,8 @@ const mSTP = (state, ownProps) => {
 const mDTP = dispatch => ({
     fetchSite: (siteId) => dispatch(fetchSite(siteId)),
     deleteSite: (siteId) => dispatch(deleteSite(siteId)),
-    // fetchBookings: (siteId) => dispatch(fetchBookings(siteId))
+    fetchBookings: () => dispatch(fetchBookings())
+    // fetchSiteBookings: (siteId) => dispatch(fetchBookings(siteId))
 })
 
 export default connect(mSTP, mDTP)(SiteShow);
