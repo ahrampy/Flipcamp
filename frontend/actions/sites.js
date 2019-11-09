@@ -1,4 +1,4 @@
-import * as APIUtil from '../utils/site_api_utils';
+import * as APIUtil from '../utils/site_api';
 
 export const RECEIVE_SITES = 'RECEIVE_SITES';
 export const RECEIVE_SITE = 'RECEIVE_SITE';
@@ -9,7 +9,7 @@ export const receiveSites = sites => ({
     sites,
 });
 
-export const receiveSite = site => {
+export const receiveSite = (site) => {
     return (
         {type: RECEIVE_SITE,
         site}
@@ -26,10 +26,12 @@ export const fetchSites = () => dispatch => (
         .then(sites => (dispatch(receiveSites(sites))))
 );
 
-export const fetchSite = id => dispatch => (
-    APIUtil.fetchSite(id)
-        .then(site => (dispatch(receiveSite(site))))
-);
+export const fetchSite = id => dispatch => {
+    return (
+        APIUtil.fetchSite(id)
+            .then(site => (dispatch(receiveSite(site))))
+        )
+};
 
 export const createSite = site => dispatch => (
     APIUtil.createSite(site)

@@ -5,6 +5,7 @@ class User < ApplicationRecord
     validates :password, length: { minimum: 6 }, allow_nil: true
 
     has_many :sites
+    has_many :bookings
 
     before_validation :ensure_session_token
     attr_reader :password

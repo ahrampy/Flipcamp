@@ -7,6 +7,7 @@ class Api::SitesController < ApplicationController
 
     def show
         @site = Site.find(params[:id])
+        render :show
     end
 
     def create

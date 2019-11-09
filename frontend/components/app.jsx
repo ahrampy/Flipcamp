@@ -3,15 +3,18 @@ import Splash from './splash/splash'
 import Nav from './nav/nav_container';
 import Modal from './modal/modal';
 import SiteShow from '../components/sites/site_show_contain';
-import { Route, Switch} from 'react-router-dom';
+import { Route, Switch, Redirect} from 'react-router-dom';
 import { AuthRoute, ProtectedRoute } from '../utils/route_util';
 
 export default () => (
     <div>
         <Modal />
-        <Nav />
-        <Route exact path='/' component={Splash} />
-        <Route exact path='/sites/:siteId' component={SiteShow} />
+        <header><Nav /></header>
+        <Switch>
+            <Route exact path='/' component={Splash} />
+            <Route exact path='/sites/:siteId' component={SiteShow} />
+            <Redirect from='*' to='/' />
+        </Switch>
         <div className='footer'></div>
     </div>
 );
