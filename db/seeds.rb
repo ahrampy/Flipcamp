@@ -8,6 +8,7 @@
 
 User.delete_all
 Site.delete_all
+Booking.delete_all
 
 demo = User.create!(
     first_name: 'Traveler',
@@ -80,4 +81,12 @@ site6 = Site.create!(
     cost: 100,
     max_guests: 3,
     img: '/site_imgs/10-15.jpg'
+)
+
+booking1 = Booking.create!(
+    site_id: site1.id,
+    user_id: demo.id,
+    check_in: '2019-10-01 14:00:00',
+    check_out: '2019-10-04 11:00:00',
+    num_guests: 2
 )

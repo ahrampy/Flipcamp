@@ -7,17 +7,20 @@ class SiteShow extends React.Component {
 
     componentDidMount() {
         if (!this.props.site) {
+            
             this.props.fetchSite(this.props.match.params.siteId);
         };
     };
 
     render () {
-
+        
         if (!this.props.site) {
+            
             return null;
         }
 
-        const { title, site_type, cost, max_guests, img } = this.props.site
+        const { title, site_type, cost, max_guests, img} = this.props.site
+        // const { bookings } = this.props.bookings
 
         return (
             <div className='site-show-container'>

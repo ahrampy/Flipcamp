@@ -55,10 +55,34 @@
 
 .site-tile-info-specs {
     display: flex;
+    flex-direction: row;
+    height: 45px;
     justify-content: space-between;
-    padding: 15px;
+    padding-left: 15px;
 }
 
 .site-tile-info-title h4 {
     font-size: 25px;
+}
+
+.site-tile-info-cost {
+    display: inline-block;
+    height: 30px;
+    width: 100px;
+    padding-top: 15px;
+}
+
+.site-tile-booked-container {
+    display: inline-block;
+    height: 45px;
+    width: 45px;
+    border-radius: 5px;
+}
+
+.site-tile-booked {
+    /* background-color: #5583A6; */
+    width: 0;
+    height: 0;
+    border-bottom: 45px solid #5583A6;
+    border-left: 45px solid transparent;
 }

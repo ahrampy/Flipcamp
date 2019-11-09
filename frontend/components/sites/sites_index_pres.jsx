@@ -8,6 +8,7 @@ class SiteIndex extends React.Component {
 
     componentDidMount() {
         this.props.fetchSites();
+        this.props.fetchBookings();
     }
 
     render () {
@@ -32,6 +33,9 @@ class SiteIndex extends React.Component {
                                 <div className='site-tile-info-specs'>
                                     <div className='site-tile-info-cost'>
                                         <p>${site.cost} / night</p>
+                                    </div>
+                                    <div className='site-tile-booked-container'>
+                                        <div className='site-tile-booked'></div>
                                     </div>
                                 </div>
                             </div>
