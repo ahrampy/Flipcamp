@@ -6,7 +6,8 @@ import SiteIndex from './sites_index_pres';
 const mSTP = state => {
     return ({
         sites: Object.values(state.entities.sites),
-        bookings: Object.values(state.entities.bookings)
+        bookings: Object.values(state.entities.bookings),
+        currentUser: state.session.currentUser
     })
 };
 

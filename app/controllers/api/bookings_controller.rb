@@ -5,6 +5,11 @@ class Api::BookingsController < ApplicationController
         render :index
     end
 
+    # def site_index
+    #     @bookings = Booking.find_by(site_id: (params[:site_id]))
+    #     render :index
+    # end
+
     def create
         @booking = Booking.new(booking_params)
         @booking.user_id = current_user.id

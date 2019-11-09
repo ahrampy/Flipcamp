@@ -12,6 +12,7 @@ class SiteShow extends React.Component {
         if (!this.props.bookings) {
             this.props.fetchBookings();
         }
+        window.scrollTo(0, 0);
     };
 
     render () {
