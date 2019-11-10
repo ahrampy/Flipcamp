@@ -1,7 +1,7 @@
 .index-sites {
     display: grid;
     justify-content: space-around;
-    padding: 150px 150px 40px 150px;
+    padding: 130px 150px 40px 150px;
     grid-template-columns: 300px 300px 300px;
     grid-column-gap: 20px;
     grid-row-gap: 50px;
@@ -76,13 +76,14 @@
     display: inline-block;
     height: 45px;
     width: 45px;
-    border-radius: 5px;
+    border-bottom-right-radius: 5px;
+    overflow: hidden;
 }
 
 .site-tile-booked {
     /* background-color: #5583A6; */
     width: 0;
     height: 0;
-    border-bottom: 45px solid #5583A6;
+    border-bottom: 45px solid #F6C270;
     border-left: 45px solid transparent;
 }

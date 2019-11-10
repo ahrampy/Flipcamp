@@ -19,7 +19,7 @@ class EntryForm extends React.Component {
         return (e) => {
             this.setState({ [type]: e.target.value });
         };
-    }
+    };
 
     handleSubmit(e) {
         e.preventDefault();
@@ -28,16 +28,13 @@ class EntryForm extends React.Component {
     }
 
     handleDemo(e) {
+        e.preventDefault();
         this.setState({email: 'demo', password: '123456'})
         this.props.action({ email: 'demo', password: '123456' })
             .then(this.props.closeModal)
     }
 
-    // handleErrors(type) {
-    //     if (this.props.error.includes(type)) {
-                // type will be error names
-    //     }
-    // }
+    
 
     renderErrors() {
         return (

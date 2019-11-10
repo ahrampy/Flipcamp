@@ -1,4 +1,5 @@
 import React from 'react';
+import BookingForm from '../bookings/bookings_form';
 
 class SiteShow extends React.Component {
     constructor (props) {
@@ -21,7 +22,7 @@ class SiteShow extends React.Component {
             return null;
         }
 
-        const { title, site_type, cost, max_guests, img} = this.props.site
+        const { id, user_id, title, site_type, cost, max_guests, img} = this.props.site
         // const { bookings } = this.props.bookings
 
         return (
@@ -54,6 +55,13 @@ class SiteShow extends React.Component {
                                 <div className='site-show-widget-bottom-content'>
                                     <div className='site-show-max-guests'>
                                         {/* <p>{max_guests}</p> */}
+                                    </div>
+                                    <div className='booking-form-container'>
+                                        <BookingForm
+                                            site_id={id}
+                                            user_id={user_id}
+                                            max_guests={max_guests}
+                                        />
                                     </div>
                                 </div>
                             </div>
