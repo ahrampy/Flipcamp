@@ -36,11 +36,11 @@
 .site-show-widget {
     background-color: white;
     height: 600px;
-    width: 300px;
+    width: 308px;
     margin-right: 100px;
     border: 1px solid #F6F1EE;
     border-radius: 2px;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .site-show-widget-top-container {
@@ -59,11 +59,11 @@
 
 .site-show-widget-top-content h4 {
     font-size: 25px;
-    font-weight: bold;
+    /* font-weight: bold; */
 }
 
 .site-show-widget-top-content p {
-    color: #5583A6;
+    color: #F6C270;
     font-size: 15px;
     padding-top: 5px;
 }
@@ -92,4 +92,8 @@
 
 .site-show-max_guests {
     
+}
+
+.date-range-picker-container {
+    width: 100%;
 }
