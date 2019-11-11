@@ -4,7 +4,7 @@ import { createBooking, fetchBookings, fetchSiteBookings } from '../../actions/b
 import SiteShow from './site_show_pres';
 
 const mSTP = (state, ownProps) => {
-    let bookings = null;
+    // let bookings = null;
 
     // if (state.session.currentUser) {
     //     bookings = state.session.currentUser.bookings;

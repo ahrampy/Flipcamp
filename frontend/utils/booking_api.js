@@ -1,16 +1,15 @@
-export const createBooking = (siteId, booking) => (
-    $.ajax({
+export const createBooking = (siteId, booking) => {
+    return $.ajax({
         method: 'POST',
         url: `api/sites/${siteId}/bookings`,
-        booking
+        data: { booking: booking }
     })
-)
+}
 
 export const editBooking = (siteId, bookingId) => (
     $.ajax({
-        method: 'POST',
-        url: `api/sites/${siteId}/bookings/${bookingId}/edit`,
-        booking
+        method: 'PATCH',
+        url: `api/sites/${siteId}/bookings/${bookingId}/edit`
     })
 )
 
