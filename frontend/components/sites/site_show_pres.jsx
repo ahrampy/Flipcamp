@@ -6,13 +6,16 @@ class SiteShow extends React.Component {
         super(props)
     }
 
-    componentDidMount() {
+    componentWillMount() {
         if (!this.props.site) {
             this.props.fetchSite(this.props.match.params.siteId);
         };
         if (!this.props.bookings) {
             this.props.fetchBookings();
         }
+    }
+
+    componentDidMount() {
         window.scrollTo(0, 0);
     };
 
@@ -23,7 +26,6 @@ class SiteShow extends React.Component {
         }
 
         const { id, user_id, title, site_type, cost, max_guests, img } = this.props.site
-        // const { bookings } = this.props.bookings
 
         return (
             <div className='site-show-container'>
@@ -60,6 +62,7 @@ class SiteShow extends React.Component {
                                         <BookingForm
                                             site_id={id}
                                             max_guests={max_guests}
+                                            bookings={this.props.bookings}
                                             createBooking={this.props.createBooking}
                                         />
                                     </div>
