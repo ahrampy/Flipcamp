@@ -36,6 +36,7 @@ export const fetchSiteBookings = (siteId) => dispatch => {
 }
 
 export const createBooking = (siteId, booking) => (dispatch) => {
+    // debugger;
     return (
         APIUtil.createBooking(siteId, booking)
             .then(booking => dispatch(receiveBooking(booking)))

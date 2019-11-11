@@ -12,6 +12,7 @@ class BookingForm extends React.Component {
             num_guests: this.props.max_guests
         };
         this.handleSubmit = this.handleSubmit.bind(this)
+        this.handleChange = this.handleChange.bind(this)
     };
 
     handleInput(type) {
@@ -19,6 +20,10 @@ class BookingForm extends React.Component {
             this.setState({ [type]: e.target.value });
         };
     };
+
+    handleChange(event) {
+        this.setState({ num_guests: event.target.value });
+    }
 
     handleSubmit(e) {
         e.preventDefault();
@@ -28,15 +33,21 @@ class BookingForm extends React.Component {
             check_out: this.state.endDate._d,
             num_guests: this.state.num_guests
         }
-        debugger;
 
         this.props.createBooking(this.props.site_id, booking)
     }
 
     render () {
+
+        const guests = []
+
+        for (let i = 1; i <= this.props.max_guests; i++) {
+            guests.push(i)
+        }
+
         return (
             <div className='booking-form-container'>
-                <form onSubmit={this.handleSubmit}>
+                <form onSubmit={this.handleSubmit} className='booking-form'>
                     <div id='date-range-picker-container'>
                         <DateRangePicker
                             startDate={this.state.startDate} 
@@ -48,8 +59,17 @@ class BookingForm extends React.Component {
                             onFocusChange={focusedInput => this.setState({ focusedInput })}
                         />
                     </div>
+                    <div className='booking-form-guest-select-container'>
+                        <select value={this.state.num_guests} onChange={this.handleChange}
+                            name="Guests" className='booking-form-guest-select'>
+                            <option value="Guests" disabled="disabled" >Guests</option>
+                            {guests.map(count => (
+                                <option key={count} value={count}>{count}</option>
+                            ))}
+                        </select>
+                    </div>
                     <div className='booking-submit-button-container'>
-                        <input className='booking-submit-button' type="submit" value="Book Now!"/>
+                        <input className='booking-submit-button' type="submit" value="Instant Book"/>
                     </div>
                 </form>
             </div>
