@@ -23,4 +23,10 @@ class ApplicationController < ActionController::Base
         !!current_user
     end
 
+    def require_signed_in
+        unless signed_in?
+            render json: ['Please sign in before booking']
+        end
+    end
+
 end

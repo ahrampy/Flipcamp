@@ -1,0 +1,13 @@
+.booking-submit-button{
+    text-decoration: none;
+    color: #F6C270;
+    border: 1px solid #F6C270;
+    padding: 18px 20px;
+    width: 100%;
+    transition-duration: 0.4s
+}
+
+.booking-submit-button:hover {
+    color: white;
+    background: #F6C270;
+}

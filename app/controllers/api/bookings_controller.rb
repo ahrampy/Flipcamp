@@ -1,5 +1,7 @@
 class Api::BookingsController < ApplicationController
 
+    before_action :require_signed_in
+
     def index
         @bookings = Booking.all
         render :index

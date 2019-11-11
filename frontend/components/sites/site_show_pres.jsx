@@ -22,7 +22,7 @@ class SiteShow extends React.Component {
             return null;
         }
 
-        const { id, user_id, title, site_type, cost, max_guests, img} = this.props.site
+        const { id, user_id, title, site_type, cost, max_guests, img } = this.props.site
         // const { bookings } = this.props.bookings
 
         return (
@@ -59,8 +59,8 @@ class SiteShow extends React.Component {
                                     <div className='booking-form-container'>
                                         <BookingForm
                                             site_id={id}
-                                            user_id={user_id}
                                             max_guests={max_guests}
+                                            createBooking={this.props.createBooking}
                                         />
                                     </div>
                                 </div>
