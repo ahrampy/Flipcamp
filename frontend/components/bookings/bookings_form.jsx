@@ -3,15 +3,15 @@ import "react-dates/initialize";
 import 'react-dates/lib/css/_datepicker.css';
 import { DateRangePicker } from "react-dates";
 
-class BookingsForm extends React.Component {
+class BookingForm extends React.Component {
     constructor (props) {
         super(props)
         this.state = {
-            site_id: this.props.site_id,
-            user_id: this.props.user_id,
             startDate: null,
-            endDate: null
+            endDate: null,
+            num_guests: this.props.max_guests
         };
+        this.handleSubmit = this.handleSubmit.bind(this)
     };
 
     handleInput(type) {
@@ -20,10 +20,23 @@ class BookingsForm extends React.Component {
         };
     };
 
+    handleSubmit(e) {
+        e.preventDefault();
+        const booking = {
+            site_id: this.props.site_id,
+            check_in: this.state.startDate._d,
+            check_out: this.state.endDate._d,
+            num_guests: this.state.num_guests
+        }
+        debugger;
+
+        this.props.createBooking(this.props.site_id, booking)
+    }
+
     render () {
         return (
             <div className='booking-form-container'>
-                <form>
+                <form onSubmit={this.handleSubmit}>
                     <div id='date-range-picker-container'>
                         <DateRangePicker
                             startDate={this.state.startDate} 
@@ -35,10 +48,13 @@ class BookingsForm extends React.Component {
                             onFocusChange={focusedInput => this.setState({ focusedInput })}
                         />
                     </div>
+                    <div className='booking-submit-button-container'>
+                        <input className='booking-submit-button' type="submit" value="Book Now!"/>
+                    </div>
                 </form>
             </div>
         );
     };
 }
 
-export default BookingsForm;
+export default BookingForm;

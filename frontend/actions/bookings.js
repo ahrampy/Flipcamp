@@ -35,9 +35,9 @@ export const fetchSiteBookings = (siteId) => dispatch => {
     )
 }
 
-export const createBooking = (booking) => (dispatch) => {
+export const createBooking = (siteId, booking) => (dispatch) => {
     return (
-        APIUtil.createBooking(booking)
+        APIUtil.createBooking(siteId, booking)
             .then(booking => dispatch(receiveBooking(booking)))
     )
 }
