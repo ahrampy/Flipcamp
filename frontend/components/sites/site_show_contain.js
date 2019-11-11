@@ -4,14 +4,9 @@ import { createBooking, fetchBookings, fetchSiteBookings } from '../../actions/b
 import SiteShow from './site_show_pres';
 
 const mSTP = (state, ownProps) => {
-    // let bookings = null;
-
-    // if (state.session.currentUser) {
-    //     bookings = state.session.currentUser.bookings;
-    // }
 
     return ({
-        site: state.entities.sites[ownProps.match.params.siteId],
+        site: state.entities.sites[ownProps.match.params.siteId]
             })
 }
 

@@ -3,6 +3,7 @@ import Splash from './splash/splash'
 import Nav from './nav/nav_container';
 import Modal from './modal/modal';
 import SiteShow from '../components/sites/site_show_contain';
+import BookingsIndex from '../components/bookings/bookings_index_contain';
 import { Route, Switch, Redirect} from 'react-router-dom';
 import { AuthRoute, ProtectedRoute } from '../utils/route_util';
 
@@ -13,6 +14,7 @@ export default () => (
         <Switch>
             <Route exact path='/' component={Splash} />
             <Route exact path='/sites/:siteId' component={SiteShow} />
+            <Route exact path='/bookings' component={BookingsIndex} />
             <Redirect from='*' to='/' />
         </Switch>
         <div className='footer'></div>

@@ -10,9 +10,20 @@ class Nav extends React.Component {
         const { signout, currentUser, openModal } = this.props;
 
         let buttons = currentUser ? (
-            <div>
+            <>
+                <div className="dropdown">
+                    <button className="dropbtn">{currentUser.first_name}</button>
+                    <div className="dropdown-content">
+                        <Link to='/bookings' style={{ textDecoration: 'none' }, { outline: 'none' }}>
+                            Bookings
+                        </Link>
+                        {/* <a href="#">Link 2</a>
+                        <a href="#">Link 3</a> */}
+                    </div>
+                </div>
+
                 <button className='btn' onClick={signout}>Sign Out</button>
-            </div>
+            </>
         ) : (
             <>
                     <button className='btn' onClick={() => openModal('signin')}>
@@ -27,12 +38,14 @@ class Nav extends React.Component {
         return (
             <header className='nav-bar-container'>
                 <div className='nav-bar'>
-                    <Link to='/' style={{ textDecoration: 'none' }, { outline : 'none' }}>
-                        <div className='nav-logos'>
-                            <img className='nav-logo-name' src='/logo.png'>
-                            </img>
-                        </div>
-                    </Link>
+                    <div className='nav-logo-container'>
+                        <Link to='/' style={{ textDecoration: 'none' }, { outline : 'none' }}>
+                            <div className='nav-logos'>
+                                <img className='nav-logo-name' src='/logo.png'>
+                                </img>
+                            </div>
+                        </Link>
+                    </div>
                     <div className='nav-buttons'>
                         {buttons}
                     </div>

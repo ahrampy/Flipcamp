@@ -1,0 +1,7 @@
+.bookings-index-main-content {
+    display: flex;
+    flex-direction: column;
+    height: 550px;
+    padding-top: 100px;
+    padding-left: 50px;
+}

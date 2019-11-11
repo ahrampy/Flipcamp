@@ -9,7 +9,7 @@ class BookingForm extends React.Component {
         this.state = {
             startDate: null,
             endDate: null,
-            num_guests: this.props.max_guests
+            num_guests: null
         };
         this.handleSubmit = this.handleSubmit.bind(this)
         this.handleChange = this.handleChange.bind(this)
@@ -45,6 +45,16 @@ class BookingForm extends React.Component {
             guests.push(i)
         }
 
+        let subimtButtonValue = "Instant Book";
+
+        if (this.props.bookings) {
+            this.props.bookings.forEach(booking => {
+                if (booking.user_id === currentUser.id) {
+                    subimtButtonValue = "Booked!"
+                }
+            })
+        }
+
         return (
             <div className='booking-form-container'>
                 <form onSubmit={this.handleSubmit} className='booking-form'>
@@ -62,14 +72,18 @@ class BookingForm extends React.Component {
                     <div className='booking-form-guest-select-container'>
                         <select value={this.state.num_guests} onChange={this.handleChange}
                             name="Guests" className='booking-form-guest-select'>
-                            <option value="Guests" disabled="disabled" >Guests</option>
+                            <option value="Guests" disabled="disabled" selected>Guests</option>
                             {guests.map(count => (
                                 <option key={count} value={count}>{count}</option>
                             ))}
                         </select>
                     </div>
                     <div className='booking-submit-button-container'>
-                        <input className='booking-submit-button' type="submit" value="Instant Book"/>
+                        <input
+                            className='booking-submit-button'
+                            type="submit"
+                            value={subimtButtonValue}
+                        />
                     </div>
                 </form>
             </div>
