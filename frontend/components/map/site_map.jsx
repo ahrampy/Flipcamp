@@ -3,7 +3,7 @@ import React from 'react';
 class SiteMap extends React.Component {
     constructor (props) {
         super(props)
-        
+
     }
 
     componentDidMount() {
