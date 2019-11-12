@@ -6,6 +6,7 @@ import BookingsIndex from'./bookings_index_pres';
 const mSTP = state => {
     return ({
         bookings: Object.values(state.entities.bookings),
+        sites: Object.values(state.entities.sites),
         currentUser: state.session.currentUser
     })
 };
