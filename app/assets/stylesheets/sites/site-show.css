@@ -29,13 +29,13 @@
     display: inline-block;
     position: relative;
     bottom: 100px;
-    height: 600px;
+    /* height: 600px; */
     width: 30%;
 }
 
 .site-show-widget {
     background-color: white;
-    height: 600px;
+    /* height: 600px; */
     width: 308px;
     margin-right: 100px;
     border: 1px solid #F6F1EE;
@@ -69,7 +69,7 @@
 }
 
 .site-show-widget-bottom-container {
-    height: 500px;
+    /* height: 500px; */
     width: 100%;
 }
 
@@ -83,6 +83,10 @@
 
 .site-show-info-title h2 {
     font-size: 35px;
+    padding: 20px;
+}
+
+.site-show-info-descrition {
     padding: 20px;
 }
 
