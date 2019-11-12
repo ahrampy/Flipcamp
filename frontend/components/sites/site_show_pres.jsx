@@ -1,5 +1,6 @@
 import React from 'react';
 import BookingForm from '../bookings/bookings_form';
+import SiteMap from '../map/site_map';
 
 class SiteShow extends React.Component {
     constructor (props) {
@@ -70,6 +71,9 @@ class SiteShow extends React.Component {
                                             createBooking={this.props.createBooking}
                                             openModal={this.props.openModal}
                                         />
+                                    </div>
+                                    <div className='site-show-widget-map'>
+                                        {/* <SiteMap /> */}
                                     </div>
                                 </div>
                             </div>
