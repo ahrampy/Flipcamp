@@ -22,8 +22,7 @@
 
 .bookings-index-title-container h2 {
     font-size: 30px;
-    text-decoration: underline;
-    text-decoration-color: #F6F1EE;
+    font-weight: 700;
 }
 
 .booking-index-stays {

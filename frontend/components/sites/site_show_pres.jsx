@@ -60,10 +60,12 @@ class SiteShow extends React.Component {
                                     </div>
                                     <div className='booking-form-container'>
                                         <BookingForm
+                                            currentUser={this.props.currentUser}
                                             site_id={id}
                                             max_guests={max_guests}
                                             bookings={this.props.bookings}
                                             createBooking={this.props.createBooking}
+                                            openModal={this.props.openModal}
                                         />
                                     </div>
                                 </div>

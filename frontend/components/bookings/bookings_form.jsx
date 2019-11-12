@@ -2,6 +2,7 @@ import React from 'react';
 import "react-dates/initialize";
 import 'react-dates/lib/css/_datepicker.css';
 import { DateRangePicker } from "react-dates";
+import { withRouter } from 'react-router-dom';
 
 class BookingForm extends React.Component {
     constructor (props) {
@@ -34,7 +35,13 @@ class BookingForm extends React.Component {
             num_guests: this.state.num_guests
         }
 
-        this.props.createBooking(this.props.site_id, booking)
+        if (this.props.currentUser) {
+            this.props.createBooking(this.props.site_id, booking)
+                .then(() => this.props.history.push('/bookings'))
+        } else {
+            this.props.openModal('signin')
+        }
+
     }
 
     render () {
@@ -93,4 +100,4 @@ class BookingForm extends React.Component {
     };
 }
 
-export default BookingForm;
+export default withRouter(BookingForm);
