@@ -1,17 +1,22 @@
 .bookings-index-main-content {
     font-family: "Calibre", Helvetica, Arial, sans-serif;
+    /* background: #F6F1EE; */
+    min-height: 550px;
+    padding-top: 80px;
+}
+
+.booking-index-site-info {
     display: flex;
     flex-direction: column;
-    /* background: #F6F1EE; */
-    height: 550px;
-    padding-top: 80px;
+    justify-content: center;
+    width: 100%;
 }
 
 .bookings-index-title-container {
     display: flex;
     justify-content: center;
     background: white;
-    height: 50px;
+    height: 100px;
     padding-top: 20px;
 }
 
@@ -19,4 +24,36 @@
     font-size: 30px;
     text-decoration: underline;
     text-decoration-color: #F6F1EE;
+}
+
+.booking-index-stays {
+    display: grid;
+    justify-content: space-around;
+    grid-template-columns: 200px 200px 200px 200px;
+    grid-column-gap: 20px;
+    grid-row-gap: 50px;
+}
+
+.booking-index-item {
+    display: flex;
+    justify-content: center;
+}
+
+.booking-index-item button{
+    text-decoration: none;
+    color: #F6C270;
+    border: 1px solid #F6C270;
+    padding: 8px;
+    margin-top: 10px;
+    transition-duration: 0.4s;
+}
+
+.booking-index-item button:hover {
+    color: white;
+    background: #F6C270;
+}
+
+.booking-index-site-title {
+    font-size: 20px;
+    padding-bottom: 8px;
 }
