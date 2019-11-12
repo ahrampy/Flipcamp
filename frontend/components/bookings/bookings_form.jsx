@@ -9,7 +9,7 @@ class BookingForm extends React.Component {
         this.state = {
             startDate: null,
             endDate: null,
-            num_guests: null
+            num_guests: 'Guests'
         };
         this.handleSubmit = this.handleSubmit.bind(this)
         this.handleChange = this.handleChange.bind(this)
@@ -70,9 +70,11 @@ class BookingForm extends React.Component {
                         />
                     </div>
                     <div className='booking-form-guest-select-container'>
-                        <select value={this.state.num_guests} onChange={this.handleChange}
+                        <select
+                            value={this.state.num_guests}
+                            onChange={this.handleChange}
                             name="Guests" className='booking-form-guest-select'>
-                            <option value="Guests" disabled="disabled" selected>Guests</option>
+                            <option value="Guests" disabled="disabled">Guests</option>
                             {guests.map(count => (
                                 <option key={count} value={count}>{count}</option>
                             ))}
