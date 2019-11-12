@@ -12,24 +12,33 @@ class BookingsIndex extends React.Component {
         window.scrollTo(0, 0);
     }
 
-    findSite(siteId, bookingId) {
+    findSite(siteId, booking) {
         let foundSite = null;
         this.props.sites.forEach( site => {
             if (site.id === siteId) {
                 foundSite = site;
             } 
         })
+        
         return foundSite ? (
             <div className='booking-index-site-container'>
-                <div className='booking-index-site-title'>
-                    {foundSite.title}
-                </div>
-                <div>
-                    {foundSite.cost}
+                <div className='booking-index-site-info'>
+                    <div className='booking-index-site-title'>
+                        {foundSite.title}
+                    </div>
+                    <div>
+                        From {booking.check_in.slice(6)} to {booking.check_out.slice(6)}
+                    </div>
+                    <div>
+                        Total cost: ${ ( parseInt(booking.check_out.slice(8))
+                                    - parseInt(booking.check_in.slice(8)) )
+                        * parseInt(foundSite.cost)
+                    }
+                    </div>
                 </div>
                 <div>
                     <button
-                        onClick={() => this.props.destroyBooking(bookingId)}
+                        onClick={() => this.props.destroyBooking(booking.id)}
                     >Cancel Booking
                     </button>
                 </div>
@@ -50,18 +59,20 @@ class BookingsIndex extends React.Component {
                 <div className='bookings-index-title-container'>
                     <h2>Your Upcoming Stays</h2>
                 </div>
+                <div className='booking-index-stays'>
                 {this.props.bookings.map(booking => {
                         if (booking.user_id === this.props.currentUser.id) {
                             if (!sites.length) return null;
                             return (
                                 <div key={booking.id} className='booking-index-item'>
-                                    <div>{this.findSite(booking.site_id, booking.id)}</div>
+                                    <div>{this.findSite(booking.site_id, booking)}</div>
                                     <br/>
                                 </div>
                             )
                         }
                     }
                 )}
+                </div>
             </div>
         )
     }

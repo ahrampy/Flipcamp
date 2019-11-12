@@ -14,7 +14,7 @@ export default () => (
         <Switch>
             <Route exact path='/' component={Splash} />
             <Route exact path='/sites/:siteId' component={SiteShow} />
-            <Route exact path='/bookings' component={BookingsIndex} />
+            <ProtectedRoute exact path='/bookings' component={BookingsIndex} />
             <Redirect from='*' to='/' />
         </Switch>
         <div className='footer'></div>
