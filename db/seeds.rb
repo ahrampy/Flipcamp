@@ -86,7 +86,7 @@ site6 = Site.create!(
 booking1 = Booking.create!(
     site_id: site1.id,
     user_id: demo.id,
-    check_in: '2019-10-01 14:00:00',
-    check_out: '2019-10-04 11:00:00',
+    check_in: '2019-10-01',
+    check_out: '2019-10-04',
     num_guests: 2
 )
