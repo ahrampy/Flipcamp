@@ -25,7 +25,8 @@ site1 = Site.create!(
     site_type: 'Camping',
     cost: 50,
     max_guests: 10,
-    img: '/site_imgs/10-10.jpg'
+    img: '/site_imgs/10-10.jpg',
+    description: 'Yosemite National Park is in California’s Sierra Nevada mountains. It’s famed for its giant, ancient sequoia trees, and for Tunnel View, the iconic vista of towering Bridalveil Fall and the granite cliffs of El Capitan and Half Dome. In Yosemite Village are shops, restaurants, lodging, the Yosemite Museum and the Ansel Adams Gallery, with prints of the photographer’s renowned black-and-white landscapes of the area.'
 )
 
 site2 = Site.create!(
@@ -36,7 +37,8 @@ site2 = Site.create!(
     site_type: 'Camping',
     cost: 60,
     max_guests: 6,
-    img: '/site_imgs/10-11.jpg'
+    img: '/site_imgs/10-11.jpg',
+    description: 'El Capitan, also known as El Cap, is a vertical rock formation in Yosemite National Park, located on the north side of Yosemite Valley, near its western end. The granite monolith is about 3,000 feet from base to summit along its tallest face, and is a popular objective for rock climbers.'
 )
 
 site3 = Site.create!(
@@ -47,7 +49,8 @@ site3 = Site.create!(
     site_type: 'Camping',
     cost: 30,
     max_guests: 8,
-    img: '/site_imgs/10-12.jpg'
+    img: '/site_imgs/10-12.jpg',
+    description: 'The Sierra Nevada is a mountain range in the Western United States, between the Central Valley of California and the Great Basin. The vast majority of the range lies in the state of California, although the Carson Range spur lies primarily in Nevada.'
 )
 
 site4 = Site.create!(
@@ -58,7 +61,8 @@ site4 = Site.create!(
     site_type: 'Camping',
     cost: 30,
     max_guests: 8,
-    img: '/site_imgs/10-13.jpg'
+    img: '/site_imgs/10-13.jpg',
+    description: 'The Sierra Nevada is a mountain range in the Western United States, between the Central Valley of California and the Great Basin. The vast majority of the range lies in the state of California, although the Carson Range spur lies primarily in Nevada.'
 )
 
 site5 = Site.create!(
@@ -69,7 +73,8 @@ site5 = Site.create!(
     site_type: 'Camping',
     cost: 40,
     max_guests: 2,
-    img: '/site_imgs/10-14.jpg'
+    img: '/site_imgs/10-14.jpg',
+    description: 'The Mojave Desert is an arid rain-shadow desert and the driest desert in North America. It is in the North American Southwest, primarily within southeastern California and southern Nevada, and it occupies 47,877 sq mi. Small areas also extend into Utah and Arizona.'
 )
 
 site6 = Site.create!(
@@ -80,7 +85,8 @@ site6 = Site.create!(
     site_type: 'Camping',
     cost: 100,
     max_guests: 3,
-    img: '/site_imgs/10-15.jpg'
+    img: '/site_imgs/10-15.jpg',
+    description: 'Santa Catalina, one of California’s Channel Islands, lies southwest of Los Angeles. It is known for its wildlife, dive sites and Mt. Orizaba, its highest peak. The resort town of Two Harbors lies to the north. To the south, in the city of Avalon, palm trees and cabanas line Descanso Beach. Avalon’s circular, art deco Catalina Casino is a cultural center with a movie theater, ballroom and museum.'
 )
 
 booking1 = Booking.create!(

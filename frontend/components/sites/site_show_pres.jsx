@@ -25,7 +25,7 @@ class SiteShow extends React.Component {
             return null;
         }
 
-        const { id, user_id, title, site_type, cost, max_guests, img } = this.props.site
+        const { id, title, cost, max_guests, img, description } = this.props.site
 
         return (
             <div className='site-show-container'>
@@ -38,6 +38,9 @@ class SiteShow extends React.Component {
                     <div className='site-show-info-container'>
                         <div className='site-show-info-title'>
                             <h2>{title}</h2>
+                        </div>
+                        <div className='site-show-info-descrition'>
+                            <p>{description}</p>
                         </div>
                     </div>
                     {/* <div className='site-show-site-type'>
