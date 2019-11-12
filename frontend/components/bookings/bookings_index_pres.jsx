@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class BookingsIndex extends React.Component {
     constructor (props) {
@@ -29,11 +30,15 @@ class BookingsIndex extends React.Component {
             <div className='booking-index-site-container'>
                 <div className='booking-index-site-info'>
                     <div className='booking-index-site-title'>
-                        {foundSite.title}
+                        <Link
+                            to={`/sites/${foundSite.id}`}
+                            style={{ textDecoration: 'none' }}
+                            >{foundSite.title}
+                        </Link>
                     </div>
                     <div>
-                        From {booking.check_in.slice(6).split('-').join('/')} to {
-                        booking.check_out.slice(6).split('-').join('/')}
+                        From {booking.check_in.slice(5).split('-').join('/')} to {
+                        booking.check_out.slice(5).split('-').join('/')}
                     </div>
                     <div>
                         Total cost: ${ Math.abs(( parseInt(booking.check_out.slice(8))
