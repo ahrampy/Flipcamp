@@ -18,7 +18,6 @@
 
 .booking-form-guest-select-container {
     display: inline-block;
-    text-align: center;
     width: 25%;
     height: 100%;
     font-size: 100%;
@@ -30,21 +29,18 @@
     background-color: white;
     border: 0px;
     transition-duration: 0.4s;
-    width: 100%;
-    height: 100%;
     font-weight: 200;
     color: #7e7b7b;
-    padding-top: 16px;
-    padding-bottom: 14px;
-    padding: 15px ;
+    padding: 14px ;
+    padding-top: 15px;
+    padding-bottom: 15px;
     cursor: pointer;
     border-radius: 0px;
     line-height: inherit;
     border: 0;
     border-top: 0;
-    border-right: 0;
+    border-left: 1px solid #F6F1EE;
     border-bottom: 4px solid transparent;
-    border-left: 0;
     border-radius: 0;
 }
 

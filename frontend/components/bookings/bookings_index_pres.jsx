@@ -3,6 +3,11 @@ import React from 'react';
 class BookingsIndex extends React.Component {
     constructor (props) {
         super(props)
+
+        this.state = {
+            bookings: this.props.bookings
+        }
+
         this.findSite = this.findSite.bind(this);
     }
 
@@ -27,19 +32,20 @@ class BookingsIndex extends React.Component {
                         {foundSite.title}
                     </div>
                     <div>
-                        From {booking.check_in.slice(6)} to {booking.check_out.slice(6)}
+                        From {booking.check_in.slice(6).split('-').join('/')} to {
+                        booking.check_out.slice(6).split('-').join('/')}
                     </div>
                     <div>
-                        Total cost: ${ ( parseInt(booking.check_out.slice(8))
-                                    - parseInt(booking.check_in.slice(8)) )
-                        * parseInt(foundSite.cost)
+                        Total cost: ${ Math.abs(( parseInt(booking.check_out.slice(8))
+                                        - parseInt(booking.check_in.slice(8)) )
+                                        * parseInt(foundSite.cost))
                     }
                     </div>
                 </div>
                 <div>
                     <button
-                        onClick={() => this.props.destroyBooking(booking.id)}
-                    >Cancel Booking
+                        onClick={() => this.props.destroyBooking(booking.id)}>
+                        Cancel Booking
                     </button>
                 </div>
             </div>

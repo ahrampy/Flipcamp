@@ -13,8 +13,8 @@ export default () => (
         <header><Nav /></header>
         <Switch>
             <Route exact path='/' component={Splash} />
-            <Route exact path='/sites/:siteId' component={SiteShow} />
             <ProtectedRoute exact path='/bookings' component={BookingsIndex} />
+            <Route exact path='/sites/:siteId' component={SiteShow} />
             <Redirect from='*' to='/' />
         </Switch>
         <div className='footer'></div>
