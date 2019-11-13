@@ -137,7 +137,7 @@ class SiteShow extends React.Component {
                             </ul>
                             <ul>
                                 <li>
-                                    On Arrival: <span>Meet and greet</span>
+                                    On Arrival: <span>Go straight to camp</span>
                                 </li>
                                 <li>
                                     Minimum Nights: <span>1 night</span>

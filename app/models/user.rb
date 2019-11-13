@@ -6,6 +6,7 @@ class User < ApplicationRecord
 
     has_many :sites
     has_many :bookings
+    has_many :reviews
 
     before_validation :ensure_session_token
     attr_reader :password
