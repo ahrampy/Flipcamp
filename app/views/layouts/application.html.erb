@@ -9,11 +9,9 @@
     <%= javascript_include_tag 'application' %>
     <%= favicon_link_tag 'tent.png' %>
 
-
     <script
       src="https://maps.googleapis.com/maps/api/js?key=<%= Rails.application.credentials.google[:api_key] %>">
     </script>
-    
 
     <% if current_user %>
         <script>
