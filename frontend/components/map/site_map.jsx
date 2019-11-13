@@ -14,6 +14,17 @@ class SiteMap extends React.Component {
         };
 
         this.map = new google.maps.Map(this.mapNode, mapOptions);
+
+        this.iconBase = 'https://maps.google.com/mapfiles/kml/shapes/'
+
+        this.marker = new google.maps.Marker({
+            position: { lat: this.props.lat, lng: this.props.lng },
+            icon: {
+                url: "http://maps.google.com/mapfiles/ms/icons/orange.png"
+            }
+        });
+
+        this.marker.setMap(this.map);
     }
 
     render() {

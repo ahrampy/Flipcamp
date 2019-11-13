@@ -40,6 +40,12 @@
     justify-content: center;
 }
 
+.booking-index-site-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
 .booking-index-item button{
     text-decoration: none;
     color: #F6C270;
@@ -84,4 +90,18 @@
 
 .bookings-index-empty a:hover {
     text-decoration: none;
+}
+
+.get-directions-btn {
+    text-decoration: none;
+    color: #F6C270;
+    border: 1px solid #F6C270;
+    padding: 8px;
+    margin-top: 10px;
+    transition-duration: 0.4s;
+}
+
+.get-directions-btn:hover {
+    color: white;
+    background: #F6C270;
 }

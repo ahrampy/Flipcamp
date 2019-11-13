@@ -48,6 +48,12 @@ class BookingsIndex extends React.Component {
                     </div>
                 </div>
                 <div>
+                    <form action="http://maps.google.com/maps" method="get" target="_blank">
+                        <input type="hidden" name="daddr" value={new google.maps.LatLng(foundSite.lat, foundSite.lng)} />
+                        <input className='get-directions-btn' type="submit" value="Get Directions" />
+                    </form>
+                </div>
+                <div>
                     <button
                         onClick={() =>
                             ((this.props.destroyBooking(booking.id)
