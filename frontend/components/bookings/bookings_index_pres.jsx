@@ -30,21 +30,21 @@ class BookingsIndex extends React.Component {
             <div className='booking-index-site-container'>
                 <div className='booking-index-site-info'>
                     <div className='booking-index-site-title'>
-                        <Link
-                            to={`/sites/${foundSite.id}`}
-                            style={{ textDecoration: 'none' }}
-                            >{foundSite.title}
+                        <Link to={`/sites/${foundSite.id}`}>
+                            {foundSite.title}
                         </Link>
                     </div>
                     <div>
-                        From {booking.check_in.slice(5).split('-').join('/')} to {
-                        booking.check_out.slice(5).split('-').join('/')}
-                    </div>
-                    <div>
+                        <span>
+                            From {booking.check_in.slice(5).split('-').join('/')} to {
+                            booking.check_out.slice(5).split('-').join('/')}
+                        </span> 
+                        <br/>
+                        <span>
                         Total cost: ${ Math.abs(( parseInt(booking.check_out.slice(8))
                                         - parseInt(booking.check_in.slice(8)) )
-                                        * parseInt(foundSite.cost))
-                    }
+                                        * parseInt(foundSite.cost))}
+                        </span>
                     </div>
                 </div>
                 <div>
@@ -68,6 +68,20 @@ class BookingsIndex extends React.Component {
 
         let sites = this.props.sites
 
+        if (!this.props.bookings.length) {
+            return (
+                <div className='bookings-index-main-content'>
+                    <div className='bookings-index-title-container'>
+                        <h2>Your Upcoming Stays</h2>
+                    </div>
+                    <div className='bookings-index-empty'>
+                        <h4>Want to get outside? <Link to='/' >Let's go!</Link>
+                        </h4>
+                    </div>
+                </div>
+            )
+        }
+
         return (
             <div className='bookings-index-main-content'>
                 <div className='bookings-index-title-container'>
@@ -90,7 +104,6 @@ class BookingsIndex extends React.Component {
             </div>
         )
     }
-
 }
 
 export default BookingsIndex

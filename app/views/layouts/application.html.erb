@@ -10,7 +10,7 @@
     <%= favicon_link_tag asset_path('tent.png') %>
 
     <script>
-      src="https://maps.googleapis.com/maps/api/js?key=<%= Rails.application.credentials.google[:api_key] %>"
+      src="https://maps.googleapis.com/maps/api/js?key='<%= Rails.application.credentials.google[:api_key] %>'"
     </script>
     
 
