@@ -26,8 +26,9 @@ class SiteShow extends React.Component {
             return null;
         }
 
-        const { id, title, cost, max_guests, img, description } = this.props.site
+        const { id, title, cost, max_guests, img, description, lat, lng } = this.props.site
 
+        // debugger;
         return (
             <div className='site-show-container'>
                 <div className='site-show-img-container'>
@@ -176,9 +177,9 @@ class SiteShow extends React.Component {
                                             openModal={this.props.openModal}
                                         />
                                     </div>
-                                    <div className='site-show-widget-map'>
-                                        {/* <SiteMap /> */}
-                                    </div>
+                                </div>
+                                <div className='site-show-widget-map-container'>
+                                    <SiteMap lng={lng} lat={lat}/>
                                 </div>
                             </div>
                         </div>
