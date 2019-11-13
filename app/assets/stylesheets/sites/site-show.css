@@ -59,6 +59,10 @@
     padding-left: 15px;
 }
 
+.booking-form-container {
+    height: 80px;
+}
+
 .site-show-widget-top-content h4 {
     font-size: 25px;
     /* font-weight: bold; */
@@ -71,7 +75,7 @@
 }
 
 .site-show-widget-bottom-container {
-    height: 500px;
+    height: 120px;
     width: 100%;
 }
 
@@ -87,6 +91,7 @@
 .site-show-info-title h2 {
     font-size: 40px;
     padding: 20px;
+    padding-top: 30px;
 }
 
 .site-show-info-descrition {
@@ -97,10 +102,6 @@
 
 .site-show-cost {
     font-size: 40px;
-}
-
-.site-show-max_guests {
-    
 }
 
 .date-range-picker-container {

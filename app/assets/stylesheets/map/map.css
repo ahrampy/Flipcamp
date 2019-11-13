@@ -1,0 +1,16 @@
+.site-show-widget-map-container {
+    margin-top: 100px;
+    height: 500px;
+    width: 100%;
+    border: 1px solid #F6F1EE;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.08);
+}
+
+.site-show-widget-map {
+    overflow: hidden;
+}
+
+#widget-map {
+    height: 100%;
+    width: 100%;
+}
