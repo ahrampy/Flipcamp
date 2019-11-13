@@ -22,8 +22,9 @@ class SiteMap extends React.Component {
             <div ref={map => this.mapNode = map}>
 
             </div>
-                )
-              }
+        )
     }
+
+}
 
 export default SiteMap;
