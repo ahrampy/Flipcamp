@@ -43,10 +43,114 @@ class SiteShow extends React.Component {
                         <div className='site-show-info-descrition'>
                             <p>{description}</p>
                         </div>
+                        <div className='site-show-info-cards-container'>
+                            <div className='site-show-info-card'>
+                                <div className='site-card-title'>
+                                    <h3>Campsite area</h3>
+                                </div>
+                                <div className='site-card-list'>
+                                    <ul>
+                                        <li>
+                                            <img src="assets/camping.png" alt="camping"/>
+                                            Bring your own tents
+                                        </li>
+                                        <li>
+                                            <img src="assets/sites.png" alt="marker"/>
+                                            4 sites
+                                        </li>
+                                        <li>
+                                            <img src="assets/guests.png" alt="guest"/>
+                                            Up to {max_guests} guests
+                                        </li>
+                                        <li>
+                                            <img src="assets/hiking.png" alt="hiker"/>
+                                            Moderate walk
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div className='site-show-info-card'>
+                                <div className='site-card-title'>
+                                    <h3>Essentials</h3>
+                                </div>
+                                <div className='site-card-list'>
+                                    <ul>
+                                        <li>
+                                            <img src="assets/toilet_true.png" alt="" />
+                                            Toilet available
+                                        </li>
+                                        <li>
+                                            <img src="assets/pets_true.png" alt="dog" />
+                                            Pets allowed
+                                        </li>
+                                        <li>
+                                            <img src="assets/campfire_false.png" alt="dog" />
+                                            No campfires
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div className='site-show-info-card'>
+                                <div className='site-card-title'>
+                                    <h3>Ammenities</h3>
+                                </div>
+                                <div className='site-card-list'>
+                                    <ul>
+                                        <li>
+                                            <img src="assets/water_true.png" alt="" />
+                                            Potable water available
+                                        </li>
+                                        <li>
+                                            <img src="assets/shower_false.png" alt="" />
+                                            No showers
+                                        </li>
+                                        <li>
+                                            <img src="assets/picnic_false.png" alt="" />
+                                            No picnic table
+                                        </li>
+                                        <li>
+                                            <img src="assets/wifi_false.png" alt="" />
+                                            No wifi
+                                        </li>
+                                        <li>
+                                            <img src="assets/bins_false.png" alt="" />
+                                            Pack it out
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div className='site-show-info-details-container'>
+                            <h3>Details</h3>
+                            <ul>
+                                <li>
+                                    Check in: <span>After 2PM</span>
+                                </li>
+                                <li>
+                                    Check out: <span>Before 12PM</span> 
+                                </li>
+                                <li>
+                                    Cancellation Policy: <span>Strict</span>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    On Arrival: <span>Meet and greet</span>
+                                </li>
+                                <li>
+                                    Minimum Nights: <span>1 night</span>
+                                </li>
+                                <li>
+                                    Accept Bookings: <span>12 months out</span>
+                                </li>
+                                <li>
+                                    Weeknight discount: <span>30% off</span>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                    {/* <div className='site-show-site-type'>
-                        <p>{site_type}</p>
-                    </div> */}
+
                     <div className='site-show-widget-container'>
                         <div className='site-show-widget'>
                             <div className='site-show-widget-top-container'>

@@ -1,6 +1,7 @@
 .site-show-container {
     font-family: "Calibre", Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
+    color: #333333;
 }
 
 .site-show-img-container {
@@ -76,18 +77,21 @@
 .site-show-info-container {
     display: inline-block;
     position: relative;
-    height: 500px;
+    min-height: 500px;
     width: 60%;
-    margin-left: 5%;
+    margin-left: 10%;
+    padding-right: 50px;
 }
 
 .site-show-info-title h2 {
-    font-size: 35px;
+    font-size: 40px;
     padding: 20px;
 }
 
 .site-show-info-descrition {
+    border-top: 1px solid #F6F1EE;
     padding: 20px;
+    line-height: 1.42;
 }
 
 .site-show-cost {
@@ -100,4 +104,56 @@
 
 .date-range-picker-container {
     width: 100%;
+}
+
+.site-show-info-cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-column-gap: 40px;
+    grid-row-gap: 40px;
+    padding-top: 50px;
+}
+
+.site-show-info-card {
+    height: 260px;
+    width: 200px;
+    padding: 20px;
+    border: 1px solid #F6F1EE;
+    font-size: 15px;
+    line-height: 2rem;
+}
+
+.site-card-title h3 {
+    font-size: 20px;
+    font-weight: 500;
+    margin-left: 10px;
+    padding-bottom: 10px;
+}
+
+.site-show-info-card img {
+    height: 30px;
+    width: 30px;
+}
+
+.site-show-info-details-container {
+    display: flex;
+    height: 200px;
+    border-top: 1px solid #F6F1EE;
+    margin-top: 40px;
+    padding-top: 20px;
+    line-height: 1.8;
+    font-size: 15px;
+}
+
+.site-show-info-details-container h3 {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.site-show-info-details-container li {
+    font-weight: bold;
+    padding-left: 100px;
+}
+.site-show-info-details-container span {
+    font-weight: normal;
 }
