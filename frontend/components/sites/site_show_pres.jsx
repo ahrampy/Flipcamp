@@ -56,15 +56,15 @@ class SiteShow extends React.Component {
                                             Bring your own tents
                                         </li>
                                         <li>
-                                            {/* <img src={asset_url('sites.png')} alt="marker"/> */}
+                                            <img src={'/sites.png'} alt="marker"/>
                                             4 sites
                                         </li>
                                         <li>
-                                            {/* <img src={asset_url('guests.png')} alt="guest"/> */}
+                                            <img src={'/guests.png'} alt="guest"/>
                                             Up to {max_guests} guests
                                         </li>
                                         <li>
-                                            {/* <img src={asset_url('hiking.png')} alt="hiker"/> */}
+                                            <img src={'/hiking.png'} alt="hiker"/>
                                             Moderate walk
                                         </li>
                                     </ul>
@@ -77,15 +77,15 @@ class SiteShow extends React.Component {
                                 <div className='site-card-list'>
                                     <ul>
                                         <li>
-                                            {/* <img src={asset_url('toilet_true.png')} alt="" /> */}
+                                            <img src={'/toilet_true.png'} alt="" />
                                             Toilet available
                                         </li>
                                         <li>
-                                            {/* <img src={asset_url('pets_true.png')} alt="" /> */}
+                                            <img src={'/pets_true.png'} alt="" />
                                             Pets allowed
                                         </li>
                                         <li>
-                                            {/* <img src={asset_url('campfire_false.png')} alt="" /> */}
+                                            <img src={'/campfire_false.png'} alt="" />
                                             No campfires
                                         </li>
                                     </ul>
@@ -98,23 +98,23 @@ class SiteShow extends React.Component {
                                 <div className='site-card-list'>
                                     <ul>
                                         <li>
-                                            {/* <img src={asset_url('water_true.png')} alt="" /> */}
+                                            <img src={'/water_true.png'} alt="" />
                                             Potable water available
                                         </li>
                                         <li>
-                                            {/* <img src={asset_url('shower_false.png')} alt="" /> */}
+                                            <img src={'/shower_false.png'} alt="" />
                                             No showers
                                         </li>
                                         <li>
-                                            {/* <img src={asset_url('picnic_false.png')} alt="" /> */}
+                                            <img src={'/picnic_false.png'} alt="" />
                                             No picnic table
                                         </li>
                                         <li>
-                                            {/* <img src={asset_url('wifi_false.png')} alt="" /> */}
+                                            <img src={'/wifi_false.png'} alt="" />
                                             No wifi
                                         </li>
                                         <li>
-                                            {/* <img src={asset_url('bins_false.png')} alt="" /> */}
+                                            <img src={'/bins_false.png'} alt="" />
                                             Pack it out
                                         </li>
                                     </ul>
