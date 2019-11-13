@@ -150,6 +150,67 @@ class SiteShow extends React.Component {
                                 </li>
                             </ul>
                         </div>
+                        <div className='site-show-info-activities-container'>
+                            <h3>Activities</h3>
+                            <ul>
+                                <li>
+                                    <img src={'/biking.png'} alt=""/>
+                                    <br/>
+                                    Biking
+                                </li>
+                                <li>
+                                    <img src={'/fishing.png'} alt=""/>
+                                    <br/>
+                                    Fishing
+                                </li>
+                                <li>
+                                    <img src={'/hiking-sml.png'} alt=""/>
+                                    <br/>
+                                    Hiking
+                                </li>
+                                <li>
+                                    <img src={'/paddling.png'} alt=""/>
+                                    <br/>
+                                    Paddling
+                                </li>
+                                <li>
+                                    <img src={'/swimming.png'} alt=""/>
+                                    <br/>
+                                    Swimming
+                                </li>
+                                {/* <li>
+                                    <img src={'/wildlife.png'} alt=""/>
+                                    <br/>
+                                    Wildlife watching
+                                </li> */}
+                                <li>
+
+                                </li>
+                            </ul>
+                        </div>
+                        <div className='site-show-info-terrain-container'>
+                            <h3>Terrain</h3>
+                            <ul>
+                                <li>
+                                    <img src={'/forest.png'} alt=""/>
+                                    <br/>
+                                    Forest
+                                </li>
+                                <li>
+                                    <img src={'/lake.png'} alt=""/>
+                                    <br/>
+                                    Lake
+                                </li>
+                                {/* <li>
+                                    <img src={'/swimming-hole.png'} alt=""/>
+                                    <br/>
+                                    Swimming<br/>hole
+                                </li> */}
+                                <li>
+
+                                </li>
+                            </ul>
+                        </div>
                     </div>
 
                     <div className='site-show-widget-container'>
@@ -164,9 +225,6 @@ class SiteShow extends React.Component {
                             </div>
                             <div className='site-show-widget-bottom-container'>
                                 <div className='site-show-widget-bottom-content'>
-                                    <div className='site-show-max-guests'>
-                                        {/* <p>{max_guests}</p> */}
-                                    </div>
                                     <div className='booking-form-container'>
                                         <BookingForm
                                             currentUser={this.props.currentUser}

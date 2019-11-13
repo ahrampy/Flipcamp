@@ -9,7 +9,7 @@ const Splash = () => (
                     Natural discovery.
                 </h1>
                 <p>
-                    Book unique camping experiences on over 300,000 campsites, cabins, RV parks, public parks and more.
+                    Book unique camping experiences in the best sites worldwide, nevermind they're all in California.
                 </p>
             </div>
             <div className='splash-site-index'>
