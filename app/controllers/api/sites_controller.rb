@@ -7,6 +7,8 @@ class Api::SitesController < ApplicationController
 
     def show
         @site = Site.find(params[:id])
+
+        # @site = site.includes(:reviews)
         render :show
     end
 
