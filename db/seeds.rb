@@ -9,6 +9,7 @@
 User.delete_all
 Site.delete_all
 Booking.delete_all
+Review.delete_all
 
 demo = User.create!(
     first_name: 'Traveler',
@@ -95,4 +96,12 @@ booking1 = Booking.create!(
     check_in: '2019-10-01',
     check_out: '2019-10-04',
     num_guests: 2
+)
+
+review1 = Review.create!(
+    site_id: site1.id,
+    user_id: demo.id,
+    author: demo.first_name,
+    recommend: true,
+    body: "The first place I ever camped, can't beat it!"
 )
