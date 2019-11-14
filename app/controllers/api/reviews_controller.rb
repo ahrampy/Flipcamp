@@ -2,9 +2,15 @@ class Api::ReviewsController < ApplicationController
 
     before_action :require_signed_in
 
+    def index
+        @reviews = Review.all
+        render :index
+    end
+
     def create
         @review = review.new(review_params)
         @review.user_id = current_user.id
+        @review.author = current_user.first_name
         if @review.save
             render json: ["Booked!"], status: 200
         else
@@ -31,7 +37,7 @@ class Api::ReviewsController < ApplicationController
     private
 
     def review_params
-        params.require(:review).permit(:site_id, :author, :recommend, :body)
+        params.require(:review).permit(:site_id, :recommend, :body)
     end
 
 end

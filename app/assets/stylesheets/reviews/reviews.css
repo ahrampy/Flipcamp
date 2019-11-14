@@ -1,0 +1,44 @@
+.site-show-reviews-container {
+    height: 240px;
+    border-top: 1px solid #F6F1EE;
+    padding-top: 20px;
+    line-height: 1.8;
+    font-size: 15px;
+}
+
+.site-show-reviews-container h3 {
+    font-size: 20px;
+    font-weight: 500;
+    padding-bottom: 30px;
+}
+
+.site-show-reviews {
+
+}
+
+.review-container {
+
+}
+
+.review-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.review-author {
+    font-weight: 600;
+}
+
+.review-author span{
+    font-weight: 400;
+}
+
+.review-date {
+    color: #7e7b7b;
+}
+
+.review-body {
+    padding-top: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #F6F1EE;
+}
