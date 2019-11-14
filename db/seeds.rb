@@ -18,6 +18,20 @@ demo = User.create!(
     password: '123456'
 )
 
+adrian = User.create!(
+    first_name: 'Adrian',
+    last_name: 'Rampy',
+    email: 'ahrampy@gmail.com',
+    password: 'password'
+)
+
+john = User.create!(
+    first_name: 'John',
+    last_name: 'Muir',
+    email: 'johnny@gmail.com',
+    password: 'password'
+)
+
 site1 = Site.create!(
     user_id: demo.id,
     title: 'Yosemite',
@@ -104,4 +118,20 @@ review1 = Review.create!(
     author: demo.first_name,
     recommend: true,
     body: "The first place I ever camped, can't beat it!"
+)
+
+review1 = Review.create!(
+    site_id: site1.id,
+    user_id: adrian.id,
+    author: adrian.first_name,
+    recommend: true,
+    body: "B-E-A-utiful views"
+)
+
+review1 = Review.create!(
+    site_id: site1.id,
+    user_id: john.id,
+    author: john.first_name,
+    recommend: true,
+    body: "Pretty sure I found this"
 )

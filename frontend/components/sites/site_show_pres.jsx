@@ -14,6 +14,7 @@ class SiteShow extends React.Component {
         if (!this.props.bookings) {
             this.props.fetchBookings();
         }
+        this.props.fetchReviews();
     }
 
     componentDidMount() {
@@ -211,8 +212,39 @@ class SiteShow extends React.Component {
                                 </li>
                             </ul>
                         </div>
+                        <div className='site-show-reviews-container'>
+                            <h3>Reviews</h3>
+                            <div className='site-show-reviews'>{
+                            this.props.reviews.map(review => {
+                                if (review.site_id === id) {
+                                    return (
+                                        <div key={review.id} className='review-container'>
+                                            <div className='review-header'>
+                                                <div className='review-author'>
+                                                    <h4>{review.author}
+                                                        {review.recommend &&
+                                                            <span> recommends this listing</span>
+                                                        }
+                                                        {!review.recommend &&
+                                                            <span> does not recommend this listing</span>
+                                                        }
+                                                    </h4>
+                                                </div>
+                                                {/* <div className='review-date'>
+                                                    <span>{review.created_at}</span>
+                                                </div> */}
+                                            </div>
+                                            <div className='review-body'>
+                                                {review.body}
+                                            </div>
+                                        </div>
+                                    )
+                                }
+                            })
+                            }</div>
+                        </div>
                     </div>
-
+                    
                     <div className='site-show-widget-container'>
                         <div className='site-show-widget'>
                             <div className='site-show-widget-top-container'>
