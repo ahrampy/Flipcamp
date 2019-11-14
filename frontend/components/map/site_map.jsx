@@ -10,7 +10,7 @@ class SiteMap extends React.Component {
 
         const mapOptions = {
             center: { lat: this.props.lat, lng: this.props.lng },
-            zoom: 10
+            zoom: 12
         };
 
         this.map = new google.maps.Map(this.mapNode, mapOptions);

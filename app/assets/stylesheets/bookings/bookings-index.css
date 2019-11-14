@@ -1,6 +1,5 @@
 .bookings-index-main-content {
     font-family: "Calibre", Helvetica, Arial, sans-serif;
-    /* background: #F6F1EE; */
     min-height: 550px;
     padding-top: 80px;
     color: #333333;
@@ -20,6 +19,10 @@
     height: 100px;
     padding-top: 20px;
 }
+
+/* .bookings-index-title-container span {
+    margin: 2px;
+} */
 
 .bookings-index-title-container h2 {
     font-size: 30px;

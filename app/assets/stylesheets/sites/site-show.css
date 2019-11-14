@@ -8,6 +8,7 @@
     display: flex;
     position: relative;
     justify-content: center;
+    background: #F6F1EE;
     max-height: 600px;
     width: 100%;
     padding-top: 70px;
