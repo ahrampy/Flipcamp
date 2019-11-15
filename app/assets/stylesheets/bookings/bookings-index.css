@@ -33,7 +33,7 @@
 .booking-index-stays {
     display: grid;
     justify-content: space-around;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     grid-column-gap: 20px;
     grid-row-gap: 50px;
 }
