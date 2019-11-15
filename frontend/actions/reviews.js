@@ -14,10 +14,10 @@ const receiveReviews = reviews => ({
     reviews
 })
 
-const deleteReview = (review) => {
+const deleteReview = (reviewId) => {
     return {
         type: REMOVE_REVIEW,
-        reviewId: review.id
+        reviewId: reviewId
     }
 }
 
@@ -52,6 +52,6 @@ export const editReview = (siteId, review) => (dispatch) => {
 export const destroyReview = (reviewId) => (dispatch) => {
     return (
         APIUtil.deleteReview(reviewId)
-            .then(review => dispatch(deleteReview(review)))
+            .then( () => dispatch(deleteReview(reviewId)))
     )
 }

@@ -1,5 +1,5 @@
 .site-show-reviews-container {
-    height: 240px;
+    min-height: 240px;
     border-top: 1px solid #F6F1EE;
     padding-top: 20px;
     line-height: 1.8;
@@ -9,7 +9,7 @@
 .site-show-reviews-container h3 {
     font-size: 20px;
     font-weight: 500;
-    padding-bottom: 30px;
+    padding-bottom: 20px;
 }
 
 .site-show-reviews {
@@ -38,7 +38,50 @@
 }
 
 .review-body {
-    padding-top: 30px;
+    padding-top: 20px;
     padding-bottom: 20px;
     border-bottom: 1px solid #F6F1EE;
+    margin-bottom: 20px;
+}
+
+.review-delete-button {
+    text-decoration: none;
+    color: #F6C270;
+    border: 1px solid #F6C270;
+    padding: 8px;
+    margin-top: 10px;
+    transition-duration: 0.4s;
+}
+
+.review-delete-button:hover {
+    color: white;
+    background: #F6C270;
+}
+
+.review-form-container {
+
+}
+
+.review-form {
+    
+}
+
+.review-form textarea {
+    resize: none;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.review-submit {
+    text-decoration: none;
+    color: #F6C270;
+    border: 1px solid #F6C270;
+    padding: 8px;
+    margin-top: 10px;
+    transition-duration: 0.4s;
+}
+
+.review-submit:hover {
+    color: white;
+    background: #F6C270;
 }

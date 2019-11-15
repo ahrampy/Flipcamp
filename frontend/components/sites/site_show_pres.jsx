@@ -1,5 +1,6 @@
 import React from 'react';
 import BookingForm from '../bookings/bookings_form';
+import ReviewForm from '../reviews/reviews_form';
 import SiteMap from '../map/site_map';
 
 class SiteShow extends React.Component {
@@ -14,12 +15,20 @@ class SiteShow extends React.Component {
         if (!this.props.bookings) {
             this.props.fetchBookings();
         }
-        this.props.fetchReviews();
     }
 
     componentDidMount() {
         window.scrollTo(0, 0);
+        if (!this.props.reviews.length) {
+            this.props.fetchReviews();
+        }
     };
+
+    componentDidUpdate(prevProps) {
+        if (this.props.reviews.length !== prevProps.reviews.length) {
+            this.props.fetchReviews();
+        }
+    } 
 
     render () {
         
@@ -236,12 +245,30 @@ class SiteShow extends React.Component {
                                             </div>
                                             <div className='review-body'>
                                                 {review.body}
+                                                <div>
+                                                    {review.user_id === this.props.userId &&
+                                                        <button
+                                                            className='review-delete-button'
+                                                            onClick={() => this.props.destroyReview(review.id)}>
+                                                            Remove Review
+                                                        </button>
+                                                    }
+                                                </div>
                                             </div>
                                         </div>
                                     )
                                 }
                             })
                             }</div>
+                            <div className='review-form'>
+                                <ReviewForm
+                                    currentUser={this.props.currentUser}
+                                    site_id={id}
+                                    user_id={this.props.userId}
+                                    createReview={this.props.createReview}
+                                    openModal={this.props.openModal}
+                                />
+                            </div>
                         </div>
                     </div>
                     
