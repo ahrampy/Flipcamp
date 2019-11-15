@@ -40,6 +40,7 @@ class ReviewForm extends React.Component {
 
         if (this.props.currentUser) {
             this.props.createReview(this.props.site_id, review)
+            .then(this.setState({ body: '' }))
               
         } else {
             this.props.openModal('signin')
