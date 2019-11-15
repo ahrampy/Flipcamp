@@ -1,14 +1,12 @@
 class Api::ReviewsController < ApplicationController
 
-    before_action :require_signed_in
-
     def index
         @reviews = Review.all
         render :index
     end
 
     def create
-        @review = review.new(review_params)
+        @review = Review.new(review_params)
         @review.user_id = current_user.id
         @review.author = current_user.first_name
         if @review.save
@@ -28,7 +26,7 @@ class Api::ReviewsController < ApplicationController
     end
 
     def destroy
-        @review = review.find(params[:id])
+        @review = Review.find(params[:id])
         @review.destroy
         render json: ["review removed"], status: 200
     end

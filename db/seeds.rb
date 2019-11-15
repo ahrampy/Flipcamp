@@ -120,18 +120,18 @@ review1 = Review.create!(
     body: "The first place I ever camped, can't beat it!"
 )
 
-review1 = Review.create!(
+review2 = Review.create!(
     site_id: site1.id,
     user_id: adrian.id,
     author: adrian.first_name,
     recommend: true,
-    body: "B-E-A-utiful views"
+    body: "B-E-A-utiful views."
 )
 
-review1 = Review.create!(
+review3 = Review.create!(
     site_id: site1.id,
     user_id: john.id,
     author: john.first_name,
-    recommend: true,
-    body: "Pretty sure I found this"
+    recommend: false,
+    body: "Pretty sure I found this?"
 )
