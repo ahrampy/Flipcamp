@@ -57,8 +57,8 @@ class BookingsIndex extends React.Component {
                     <button
                         onClick={() =>
                             ((this.props.destroyBooking(booking.id)
-                            .then(() => this.props.history.push('/')))
-                            )}>
+                            // .then(() => this.props.history.push('/'))
+                            ))}>
                         Cancel Booking
                     </button>
                 </div>
