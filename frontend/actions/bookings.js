@@ -14,10 +14,10 @@ const receiveBookings = bookings => ({
     bookings
 })
 
-const deleteBooking = (booking) => {
+const deleteBooking = (bookingId) => {
     return {
         type: REMOVE_BOOKING,
-        bookingId: booking.id
+        bookingId: bookingId
     }
 }
 
@@ -45,6 +45,6 @@ export const createBooking = (siteId, booking) => (dispatch) => {
 export const destroyBooking = (bookingId) => (dispatch) => {
     return (
         APIUtil.deleteBooking(bookingId)
-            .then(booking => dispatch(deleteBooking(booking)))
+            .then(() => dispatch(deleteBooking(bookingId)))
     )
 }
