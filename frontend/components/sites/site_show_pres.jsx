@@ -211,11 +211,6 @@ class SiteShow extends React.Component {
                                     <br/>
                                     Lake
                                 </li>
-                                {/* <li>
-                                    <img src={'/swimming-hole.png'} alt=""/>
-                                    <br/>
-                                    Swimming<br/>hole
-                                </li> */}
                                 <li>
 
                                 </li>

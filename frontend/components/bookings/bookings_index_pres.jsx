@@ -81,8 +81,7 @@ class BookingsIndex extends React.Component {
                         <h2>Your Upcoming Stays</h2>
                     </div>
                     <div className='bookings-index-empty'>
-                        <h4>Want to get outside? <Link to='/' >Let's go!</Link>
-                        </h4>
+                        <h4>Want to get outside? <Link to='/'>Let's go!</Link></h4>
                     </div>
                 </div>
             )
