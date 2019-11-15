@@ -26,8 +26,4 @@ Flipcamp was built with a Ruby on Rails framework, utilizing PostgresSQL for org
 
 Flipcamp uses BCrypt's secure password auth pattern, allowing users to safely sign up as well as sign back in to access their listings and camp reservations. A demo user is also provided to preview some protected site features.
 
-<object data="https://i.imgur.com/FEUdfv2.png" type="application/pdf" width="700px" height="700px">
-    <embed src="https://i.imgur.com/FEUdfv2.png">
-        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="https://i.imgur.com/FEUdfv2.png">Download PDF</a>.</p>
-    </embed>
-</object>
+<img src="https://i.imgur.com/FEUdfv2.png"/>
