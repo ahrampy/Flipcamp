@@ -46,6 +46,7 @@
   "devDependencies": {
     "@types/google-maps": "^3.2.1",
     "css-loader": "^3.2.0",
-    "style-loader": "^1.0.0"
+    "style-loader": "^1.0.0",
+    "serialize-javascript": ">=2.1.1"
   }
 }
