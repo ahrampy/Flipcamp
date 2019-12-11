@@ -16,7 +16,6 @@ Flipcamp is a site clone of Hipcamp, an online marketplace that helps users find
 * JBuilder
 * Webpack
 * Google Maps API
-* Amazon AWS S3*
 
 Flipcamp was built with a Ruby on Rails framework, utilizing PostgresSQL for organized data storage, and the React and Redux libraries for dynamic frontend, single-page app navigation and interactivity. It includes the Google Maps API and is planned to fully integrate Amazon Web Services S3 photo storage to allow image uploading without impacting site performance. 
 
