@@ -24,7 +24,7 @@
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10"
   },
-  "description": "App Academy Full-Stack Project",
+  "description": "Hipcamp site clone",
   "version": "1.0.0",
   "main": "index.js",
   "directories": {
@@ -41,7 +41,7 @@
     "npm": "6.9.0"
   },
   "keywords": [],
-  "author": "",
+  "author": "Adrian Rampy",
   "license": "ISC",
   "devDependencies": {
     "@types/google-maps": "^3.2.1",
