@@ -2,7 +2,7 @@
 
 [Flipcamp Live](https://flipcamp.herokuapp.com/#/)
 
-Flipcamp is a site clone of Hipcamp, an online marketplace that helps people find and book campsites directly from landowners.
+Flipcamp is a site clone of Hipcamp, an online marketplace that helps users find and book campsites directly from landowners.
 
 
 ## Technologies
