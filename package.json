@@ -41,7 +41,11 @@
     "npm": "6.9.0"
   },
   "keywords": [],
+<<<<<<< HEAD
   "author": "Adrian Rampy",
+=======
+  "author": "",
+>>>>>>> 4871f01ff568d78dd375ecf3f3679b88e812cc97
   "license": "ISC",
   "devDependencies": {
     "@types/google-maps": "^3.2.1",
