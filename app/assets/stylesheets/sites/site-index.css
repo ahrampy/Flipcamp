@@ -33,9 +33,9 @@
 }
 
 .site-tile-img {
+    position: center center;
     border-radius: 5px;
     max-width: 100%;
-    object-position: 50% 50%;
 }
 
 .site-tile-info {
