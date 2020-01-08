@@ -42,7 +42,7 @@ Flipcamp displays all relevant information a prospective camper may want to know
 See where your campsite is, and once you've booked it, get directions straight there.
 
 <p align="center">
-  <img src="https://i.imgur.com/q3sGZsp.png"/>
-  <img src="https://i.imgur.com/mtqDZ1f.png"/>
+  <img width="410" height="340" src="https://i.imgur.com/q3sGZsp.png"/>
+  <img width="370" height="320" src="https://i.imgur.com/mtqDZ1f.png"/>
 </p>
 
