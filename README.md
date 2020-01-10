@@ -45,3 +45,7 @@ See where your campsite is, and once you've booked it, get directions straight t
   <img width="410" height="340" src="https://i.imgur.com/q3sGZsp.png"/>
   <img width="370" height="320" src="https://i.imgur.com/mtqDZ1f.png"/>
 </p>
+
+## Future Plans and Implementations
+
+In addition to adding AWS S3 photo services to allow new campsite listing creations, a simple user profile which shows user reviews can be added, as well as "saved spots" to allow a user to bookmark and come back to campsites they are interested in or particularly enjoyed.
