@@ -2,7 +2,7 @@
 
 [Flipcamp Live](https://flipcamp.herokuapp.com/#/)
 
-Flipcamp is a site clone of Hipcamp, an online marketplace that helps users find and book campsites directly from landowners.
+Flipcamp is a site clone of Hipcamp, an online marketplace that helps users find and book campsites directly from landowners. In this clone, I have focused on the feel of the homepage, as well as the simplicity of information layout the original site does so well in its views of individual campsites. I was interested in using the same react-dates component featured on Hipcamp and so many other booking sites, and the google maps API within a react component. In the future of this project I would love to build in search functionality, as well as add additional seeds to with more specific location sub-categories. Thanks for taking a look!
 
 
 ## Technologies
@@ -24,13 +24,13 @@ Flipcamp was built with a Ruby on Rails framework, utilizing PostgresSQL for org
 
 ### User Authorization
 
-Flipcamp uses BCrypt's secure password auth pattern, allowing users to safely sign up as well as sign back in to access their listings and camp reservations. A demo user is also provided to preview some protected site features.
+Flipcamp uses BCrypt's secure password auth pattern, allowing users to safely sign up and sign back in to access their listings and camp reservations, and leave comments on other campsite listings. A demo user is also provided to preview some protected site features.
 
 <img src="https://i.imgur.com/FEUdfv2.png"/>
 
 ### Campsites
 
-Flipcamp displays all relevant information a prospective camper may want to know about a campsite. Users can view, book, delete, and get directions to a campsite, with the added help of React-Dates. Campsites can also be reviewed and will always show the reviews they have recieved.
+Flipcamp displays all relevant information a prospective camper may want to know about a campsite. Users can view, book, delete, and get directions to a campsite, with the added help of react-dates. Campsites can also be reviewed and show wether a reviewer generally recommends a camping spot or not.
 
 <p align="center">
   <img width="410" height="300" src="https://i.imgur.com/pKhc67f.png"/>
@@ -39,10 +39,9 @@ Flipcamp displays all relevant information a prospective camper may want to know
 
 ### Google Maps
 
-See where your campsite is, and once you've booked it, get directions straight there.
+See where your campsite is, and once you've booked it, get directions straight there. The added feature of Google Maps Circles makes the location less specific while showing the general area in order to protect privacy while giving prospective campers a sense of where they would be.
 
 <p align="center">
   <img width="410" height="340" src="https://i.imgur.com/q3sGZsp.png"/>
   <img width="370" height="320" src="https://i.imgur.com/mtqDZ1f.png"/>
 </p>
-
