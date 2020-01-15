@@ -28,6 +28,12 @@ Flipcamp uses standard Ruby on Rails authorization pattern with BCrypt's secure 
 
 <img src="https://i.imgur.com/FEUdfv2.png"/>
 
+### Front Page
+
+When the site is first navigated to, they will be presented an index of campsite listings, including a simple "tag" indicating whether they have a current reservation anywhere. Each site tile is interactive and clickable, and displays basic site information including site type, nightly cost, title, and the reservation tag. As a future addition, a search function and/or site filtering can be added.
+
+<img src="https://i.imgur.com/BxgrCpI.png"/>
+
 ### Campsites
 
 Flipcamp displays all relevant information a prospective camper may want to know about a campsite. Users can view, book, delete, and get directions to a campsite, with the added help of react-dates. Campsites can also be reviewed and show wether a reviewer generally recommends a camping spot or not.
