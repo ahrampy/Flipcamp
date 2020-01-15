@@ -24,13 +24,25 @@ Flipcamp was built with a Ruby on Rails framework, utilizing PostgresSQL for org
 
 ### User Authorization
 
-Flipcamp uses BCrypt's secure password auth pattern, allowing users to safely sign up and sign back in to access their listings and camp reservations, and leave comments on other campsite listings. A demo user is also provided to preview some protected site features.
+Flipcamp uses standard Ruby on Rails authorization pattern with BCrypt's secure hashing procedure, which never stores a plain text password or an un-salted one, allowing users to safely sign up and sign back in to access their listings and camp reservations, and leave reviews on other campsite listings. A demo user is also provided to preview some protected site features.
 
 <img src="https://i.imgur.com/FEUdfv2.png"/>
 
 ### Campsites
 
 Flipcamp displays all relevant information a prospective camper may want to know about a campsite. Users can view, book, delete, and get directions to a campsite, with the added help of react-dates. Campsites can also be reviewed and show wether a reviewer generally recommends a camping spot or not.
+
+#### Bookings
+
+With an implementation of react-dates and its two-month spread build, users can select a start date and an end date for their camping trip in a fluid set opf clicks, without clicking away to select different dropdowns or pages.
+
+#### Information
+
+With every campsite comes a long list of potential features, either available or not. These all need an area to be displayed, so the potential campers have a good sense of what they are getting and what they need to bring. Most input is limited to boolean true or false values, but some categories include more advanced options such as sign-in/sign-out times or what the arrival procedure is like.
+
+#### Reviews
+
+At the bottom of every campsite listing, users are given the option to review their experience during their stays, as well as give a simple recommend/do not recommend indication. In future implementations, user should be able to see their reviews in addition to where they have stayed in the past, with an option to review.
 
 <p align="center">
   <img width="410" height="300" src="https://i.imgur.com/pKhc67f.png"/>
