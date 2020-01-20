@@ -17,8 +17,6 @@ class Nav extends React.Component {
                         <Link to='/bookings' style={{ textDecoration: 'none' }, { outline: 'none' }}>
                             Bookings
                         </Link>
-                        {/* <a href="#">Link 2</a>
-                        <a href="#">Link 3</a> */}
                     </div>
                 </div>
 
