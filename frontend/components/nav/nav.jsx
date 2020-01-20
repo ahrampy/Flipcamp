@@ -44,6 +44,10 @@ class Nav extends React.Component {
                             </div>
                         </Link>
                     </div>
+                    <div className='search-bar'>
+                        <img src="/assets/search.png" alt=""/>
+                        <input type="text"/>
+                    </div>
                     <div className='nav-buttons'>
                         {buttons}
                     </div>
