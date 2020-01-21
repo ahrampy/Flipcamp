@@ -50,6 +50,21 @@ class Nav extends React.Component {
                     </div>
                     <div className='nav-buttons'>
                         {buttons}
+                        <div className="dropdown">
+                            <button className="dropbtn links"><img id='link-icon' src="/assets/tent.png" alt="tent"/></button>
+                            <div className="dropdown-content links-content">
+                                <a href='https://www.ahrampy.com/' style={{ textDecoration: 'none' }, { outline: 'none' }}>
+                                    Portfolio <img src="/assets/portfolio.png" alt="portfolio"/>
+                                </a>
+                                <a href='https://github.com/ahrampy' style={{ textDecoration: 'none' }, { outline: 'none' }}>
+                                    GitHub <img src="/assets/github-logo.png" alt="git hub"/>
+                                </a>
+                                <a href='https://www.linkedin.com/in/adrian-rampy-1b8924198/' style={{ textDecoration: 'none' }, { outline: 'none' }}>
+                                    LinkedIn <img src="/assets/linkedin.png" alt="linked in"/>
+                                </a>
+
+                            </div>
+                        </div>
                     </div>
                 </div>
             </header>
