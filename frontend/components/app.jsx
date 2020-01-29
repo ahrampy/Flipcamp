@@ -17,6 +17,8 @@ export default () => (
             <Route exact path='/sites/:siteId' component={SiteShow} />
             <Redirect from='*' to='/' />
         </Switch>
-        <div className='footer'></div>
+        <div className='footer'>
+            <span>&copy; 2019 Adrian Rampy. All rights reserved.</span>
+        </div>
     </div>
 );
