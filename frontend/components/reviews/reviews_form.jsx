@@ -6,7 +6,7 @@ class ReviewForm extends React.Component {
         super(props)
         this.state = {
             body: '',
-            recommend: false
+            recommend: true
         };
         this.handleSubmit = this.handleSubmit.bind(this)
         this.handleInput = this.handleInput.bind(this)
@@ -41,7 +41,6 @@ class ReviewForm extends React.Component {
         if (this.props.currentUser) {
             this.props.createReview(this.props.site_id, review)
             .then(this.setState({ body: '' }))
-              
         } else {
             this.props.openModal('signin')
         }
@@ -60,6 +59,7 @@ class ReviewForm extends React.Component {
                             name="recommend"
                             value={this.state.recommend}
                             onClick={this.handleYesClick()}
+                            defaultChecked
                             /> Yes <input
                             type="radio"
                             name="recommend"
