@@ -144,6 +144,45 @@ See where your campsite is, and once you've booked it, get directions straight t
   <img width="370" height="320" src="https://i.imgur.com/mtqDZ1f.png"/>
 </p>
 
+```javascript
+import React from 'react';
+
+class SiteMap extends React.Component {
+    constructor (props) {
+        super(props);
+    };
+
+    componentDidMount() {
+
+        const mapOptions = {
+            center: { lat: this.props.lat, lng: this.props.lng },
+            zoom: 12
+        };
+
+        this.map = new google.maps.Map(this.mapNode, mapOptions);
+
+        this.circle = new google.maps.Circle({
+            strokeColor: '#F6C270',
+            strokeOpacity: 0.8,
+            strokeWeight: 2.5,
+            fillColor: '#F6C270',
+            fillOpacity: 0.40,
+            map: this.map,
+            center: { lat: this.props.lat, lng: this.props.lng },
+            radius: 2000
+        });
+    };
+
+    render() {
+        return (
+            <div id='widget-map' ref={map => this.mapNode = map}></div>
+        );
+    };
+};
+
+export default SiteMap;
+```
+
 ## Future Plans and Implementations
 
 In addition to adding AWS S3 photo services to allow new campsite listing creations, a simple user profile which shows user reviews can be added, as well as "saved spots" to allow a user to bookmark and come back to campsites they are interested in or particularly enjoyed.
