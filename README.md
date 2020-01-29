@@ -119,7 +119,7 @@ return (
             </div>
         </form>
     </div>
-    );
+);
 ```
 
 #### Information
