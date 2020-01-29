@@ -2,8 +2,7 @@ import React from 'react';
 
 class SiteMap extends React.Component {
     constructor (props) {
-        super(props)
-
+        super(props);
     }
 
     componentDidMount() {
@@ -40,12 +39,9 @@ class SiteMap extends React.Component {
 
     render() {
         return (
-            <div id='widget-map' ref={map => this.mapNode = map}>
-
-            </div>
+            <div id='widget-map' ref={map => this.mapNode = map}></div>
         )
     }
-
 }
 
 export default SiteMap;
