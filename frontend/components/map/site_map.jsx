@@ -34,14 +34,14 @@ class SiteMap extends React.Component {
             map: this.map,
             center: { lat: this.props.lat, lng: this.props.lng },
             radius: 2000
-        })
-    }
+        });
+    };
 
     render() {
         return (
             <div id='widget-map' ref={map => this.mapNode = map}></div>
-        )
-    }
-}
+        );
+    };
+};
 
 export default SiteMap;
