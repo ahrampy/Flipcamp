@@ -28,6 +28,48 @@ Flipcamp uses standard Ruby on Rails authorization pattern with BCrypt's secure 
 
 <img src="https://i.imgur.com/FEUdfv2.png"/>
 
+```ruby
+class User < ApplicationRecord
+
+    validates :email, presence: true, uniqueness: true
+    validates :first_name, :last_name, :password_digest, :session_token, presence: true
+    validates :password, length: { minimum: 6 }, allow_nil: true
+
+    has_many :sites
+    has_many :bookings
+    has_many :reviews
+
+    before_validation :ensure_session_token
+    attr_reader :password
+
+    def self.find_by_credentials(email, password)
+        user = User.find_by(email: email)
+        user && user.is_password?(password) ? user : nil
+    end
+
+    def password=(password)
+        @password = password
+        self.password_digest = BCrypt::Password.create(password)
+    end
+
+    def is_password?(password)
+        BCrypt::Password.new(self.password_digest).is_password?(password)
+    end
+
+    def ensure_session_token
+        self.session_token ||= SecureRandom.urlsafe_base64
+    end
+
+    def reset_session_token!
+        self.session_token = SecureRandom.urlsafe_base64
+        self.save
+        self.session_token
+    end
+
+end
+
+```
+
 ### Front Page
 
 When the site is first navigated to, they will be presented an index of campsite listings, including a simple "tag" indicating whether they have a current reservation anywhere. Each site tile is interactive and clickable, and displays basic site information including site type, nightly cost, title, and the reservation tag. As a future addition, a search function and/or site filtering can be added.
@@ -41,6 +83,44 @@ Flipcamp displays all relevant information a prospective camper may want to know
 #### Bookings
 
 With an implementation of react-dates and its two-month spread build, users can select a start date and an end date for their camping trip in a fluid set opf clicks, without clicking away to select different dropdowns or pages.
+
+```javascript
+return (
+    <div className='booking-form-container'>
+        <form onSubmit={this.handleSubmit} className='booking-form'>
+            <div id='date-range-picker-container'>
+                <DateRangePicker
+                    startDate={this.state.startDate} 
+                    startDateId="check-in"
+                    endDate={this.state.endDate}
+                    endDateId="check-out"
+                    onDatesChange={({ startDate, endDate }) => this.setState({ startDate, endDate })}
+                    focusedInput={this.state.focusedInput}
+                    onFocusChange={focusedInput => this.setState({ focusedInput })}
+                />
+            </div>
+            <div className='booking-form-guest-select-container'>
+                <select
+                    value={this.state.num_guests}
+                    onChange={this.handleChange}
+                    name="Guests" className='booking-form-guest-select'>
+                    <option value="Guests" disabled="disabled">Guests</option>
+                    {guests.map(count => (
+                        <option key={count} value={count}>{count}</option>
+                    ))}
+                </select>
+            </div>
+            <div className='booking-submit-button-container'>
+                <input
+                    className='booking-submit-button'
+                    type="submit"
+                    value={subimtButtonValue}
+                />
+            </div>
+        </form>
+    </div>
+);
+```
 
 #### Information
 
@@ -63,6 +143,45 @@ See where your campsite is, and once you've booked it, get directions straight t
   <img width="410" height="340" src="https://i.imgur.com/q3sGZsp.png"/>
   <img width="370" height="320" src="https://i.imgur.com/mtqDZ1f.png"/>
 </p>
+
+```javascript
+import React from 'react';
+
+class SiteMap extends React.Component {
+    constructor (props) {
+        super(props);
+    };
+
+    componentDidMount() {
+
+        const mapOptions = {
+            center: { lat: this.props.lat, lng: this.props.lng },
+            zoom: 12
+        };
+
+        this.map = new google.maps.Map(this.mapNode, mapOptions);
+
+        this.circle = new google.maps.Circle({
+            strokeColor: '#F6C270',
+            strokeOpacity: 0.8,
+            strokeWeight: 2.5,
+            fillColor: '#F6C270',
+            fillOpacity: 0.40,
+            map: this.map,
+            center: { lat: this.props.lat, lng: this.props.lng },
+            radius: 2000
+        });
+    };
+
+    render() {
+        return (
+            <div id='widget-map' ref={map => this.mapNode = map}></div>
+        );
+    };
+};
+
+export default SiteMap;
+```
 
 ## Future Plans and Implementations
 
