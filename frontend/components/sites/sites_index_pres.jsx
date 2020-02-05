@@ -34,11 +34,13 @@ class SiteIndex extends React.Component {
 
         return (
             <div>
-                <div>
+                <div className="search-holder">
+                    <img src="/link_icons/search.png" alt="" />
                     <input
+                        className="search-input"
                         type="text"
                         value={this.state.searchParams}
-                        placeholder="Search for campsites..."
+                        placeholder="search by name or type..."
                         onChange={this.handleSearch}
                     />
                 </div>
