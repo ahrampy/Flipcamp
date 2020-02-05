@@ -25,7 +25,8 @@
     display: inline-block;
     width: 25%;
     height: 100%;
-    font-size: 100%;
+    font-size: 15px;
+    line-height: inherit;
 }
 
 .booking-form-guest-select-container select {

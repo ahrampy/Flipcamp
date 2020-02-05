@@ -43,7 +43,7 @@
 
 #check-in {
   text-align: center;
-  font-size: 100%;
+  font-size: 15px;
   width: 77px;
   padding: 15px;
   cursor: pointer;
@@ -57,7 +57,7 @@
 
 #check-out {
   text-align: center;
-  font-size: 100%;
+  font-size: 15px;
   width: 77px;
   padding: 15px;
   cursor: pointer;
