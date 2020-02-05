@@ -32,6 +32,18 @@ class Nav extends React.Component {
                 </button>
             </>
             );
+
+        // let search = this.props.location !== '/' ? (
+        //     <>
+
+        //     </>
+        // ) : (
+        //     <div className='search-bar'>
+        //         <img src="/link_icons/search.png" alt="" />
+        //         <input type="text" />
+        //     </div>
+        // );
+
         return (
             <header className='nav-bar-container'>
                 <div className='nav-bar'>
@@ -43,10 +55,7 @@ class Nav extends React.Component {
                             </div>
                         </Link>
                     </div>
-                    {/* <div className='search-bar'>
-                        <img src="/link_icons/search.png" alt=""/>
-                        <input type="text"/>
-                    </div> */}
+                    {/* {search} */}
                     <div className='nav-buttons'>
                         {buttons}
                         <div className="dropdown">
