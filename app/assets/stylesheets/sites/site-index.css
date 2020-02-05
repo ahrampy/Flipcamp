@@ -87,13 +87,15 @@
 }
 
 .search-holder {
-    padding: 25px;
+    display: flex;
+    align-items: center;
+    padding: 15px 25px;
     margin-right: 6%;
-    margin-bottom: 40px;
+    margin-bottom: 45px;
     width: inherit;
     border-radius: 5px;
     background-color: #F6F1EE;
-    box-shadow: 2px 2px 5px 1px #D3D3D3;
+    box-shadow: 1px 1px 3px 1px #D3D3D3;
 }
 
 .search-input {

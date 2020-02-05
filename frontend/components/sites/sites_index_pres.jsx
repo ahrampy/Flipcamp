@@ -40,7 +40,7 @@ class SiteIndex extends React.Component {
                         className="search-input"
                         type="text"
                         value={this.state.searchParams}
-                        placeholder="search by name or type..."
+                        placeholder="search by name or site type..."
                         onChange={this.handleSearch}
                     />
                 </div>

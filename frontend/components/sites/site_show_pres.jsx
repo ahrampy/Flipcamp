@@ -8,17 +8,14 @@ class SiteShow extends React.Component {
         super(props)
     }
 
-    componentWillMount() {
+    componentDidMount() {
+        window.scrollTo(0, 0);
         if (!this.props.site) {
             this.props.fetchSite(this.props.match.params.siteId);
         };
         if (!this.props.bookings) {
             this.props.fetchBookings();
         }
-    }
-
-    componentDidMount() {
-        window.scrollTo(0, 0);
         if (!this.props.reviews.length) {
             this.props.fetchReviews();
         }
