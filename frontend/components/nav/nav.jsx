@@ -17,7 +17,7 @@ class Nav extends React.Component {
                         <Link to='/bookings' style={{ textDecoration: 'none' }, { outline: 'none' }}>
                             My Bookings
                         </Link>
-                        <Link onClick={signout}>Sign Out</Link>
+                        <Link to='/' onClick={signout}>Sign Out</Link>
                     </div>
                 </div>
             </>
