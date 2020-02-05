@@ -35,7 +35,6 @@ class SiteShow extends React.Component {
 
         const { id, title, cost, max_guests, img, description, lat, lng } = this.props.site
 
-        // debugger;
         return (
             <div className='site-show-container'>
                 <div className='site-show-img-container'>
@@ -185,11 +184,11 @@ class SiteShow extends React.Component {
                                     <br/>
                                     Swimming
                                 </li>
-                                {/* <li>
+                                <li>
                                     <img src={'/wildlife.png'} alt=""/>
                                     <br/>
-                                    Wildlife watching
-                                </li> */}
+                                    Wildlife
+                                </li>
                                 <li>
 
                                 </li>
@@ -217,6 +216,7 @@ class SiteShow extends React.Component {
                             <h3>Reviews</h3>
                             <div className='site-show-reviews'>{
                             this.props.reviews.map(review => {
+                                // const created_at = review.created_at.slice(0, 10);
                                 if (review.site_id === id) {
                                     return (
                                         <div key={review.id} className='review-container'>
@@ -232,7 +232,7 @@ class SiteShow extends React.Component {
                                                     </h4>
                                                 </div>
                                                 {/* <div className='review-date'>
-                                                    <span>{review.created_at}</span>
+                                                    <span>{created_at}</span>
                                                 </div> */}
                                             </div>
                                             <div className='review-body'>

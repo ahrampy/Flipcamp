@@ -22,8 +22,8 @@
 .nav-logos {
     display: flex;
     text-decoration: none;
-    color: black;
     margin-top: 5px;
+    filter: invert(0.15);
 }
 
 .nav-buttons {

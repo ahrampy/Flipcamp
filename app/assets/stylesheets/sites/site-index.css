@@ -105,6 +105,7 @@
 }
 
 .search-holder > img {
+    filter: invert(0.15);
     height: 35px;
     padding-right: 15px;
 }
