@@ -10,27 +10,26 @@ class Nav extends React.Component {
         const { signout, currentUser, openModal } = this.props;
 
         let buttons = currentUser ? (
-            <>
-                <div className="dropdown">
+            <>  
+                <div className="dropdown welcome">
                     <button className="dropbtn">{currentUser.first_name}</button>
                     <div className="dropdown-content">
                         <Link to='/bookings' style={{ textDecoration: 'none' }, { outline: 'none' }}>
-                            Bookings
+                            My Bookings
                         </Link>
+                        <Link onClick={signout}>Sign Out</Link>
                     </div>
                 </div>
-
-                <button className='btn' onClick={signout}>Sign Out</button>
             </>
         ) : (
             <>
-                    <button className='btn' onClick={() => openModal('signin')}>
-                        Sign In
-                    </button>
+                <button className='btn' onClick={() => openModal('signin')}>
+                    Sign In
+                </button>
 
-                    <button className='btn' onClick={() => openModal('signup')}>
-                        Sign Up
-                    </button>
+                <button className='btn' onClick={() => openModal('signup')}>
+                    Sign Up
+                </button>
             </>
             );
         return (
