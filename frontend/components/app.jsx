@@ -18,7 +18,7 @@ export default () => (
             <Redirect from='*' to='/' />
         </Switch>
         <div className='footer'>
-            <span>&copy; 2019 <a href="https://www.ahrampy.com/">Adrian Rampy</a>. All rights reserved.</span>
+            <span>&copy; 2020 <a href="https://www.ahrampy.com/">Adrian Rampy</a>. All rights reserved.</span>
         </div>
     </div>
 );
