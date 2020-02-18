@@ -1,19 +1,19 @@
-import React from 'react';
-import { closeModal } from '../../actions/modal';
-import { connect } from 'react-redux';
-import SignupContainer from '../session/signup_container';
-import SigninContainer from '../session/signin_container';
+import React from "react";
+import { closeModal } from "../../actions/modal";
+import { connect } from "react-redux";
+import SignupContainer from "../session/signup_container";
+import SigninContainer from "../session/signin_container";
 
-function Modal({modal, closeModal}) {
+function Modal({ modal, closeModal }) {
   if (!modal) {
     return null;
   }
   let component;
   switch (modal) {
-    case 'signin':
+    case "signin":
       component = <SigninContainer />;
       break;
-    case 'signup':
+    case "signup":
       component = <SignupContainer />;
       break;
     default:
@@ -22,7 +22,7 @@ function Modal({modal, closeModal}) {
   return (
     <div className="modal-background" onClick={closeModal}>
       <div className="modal-child" onClick={e => e.stopPropagation()}>
-        { component }
+        {component}
       </div>
     </div>
   );
