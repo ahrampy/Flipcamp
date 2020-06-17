@@ -12,14 +12,6 @@
     padding-bottom: 20px;
 }
 
-.site-show-reviews {
-
-}
-
-.review-container {
-
-}
-
 .review-header {
     display: flex;
     justify-content: space-between;
@@ -46,8 +38,10 @@
 
 .review-delete-button {
     text-decoration: none;
+    background: white;
     color: #F6C270;
     border: 1px solid #F6C270;
+    border-radius: 2px;
     padding: 8px;
     margin-top: 10px;
     transition-duration: 0.4s;
@@ -58,14 +52,6 @@
     background: #F6C270;
 }
 
-.review-form-container {
-
-}
-
-.review-form {
-    
-}
-
 .review-form textarea {
     resize: none;
     padding: 10px;
@@ -74,8 +60,10 @@
 
 .review-submit {
     text-decoration: none;
+    background: white;
     color: #F6C270;
     border: 1px solid #F6C270;
+    border-radius: 2px;
     padding: 8px;
     margin-top: 10px;
     transition-duration: 0.4s;

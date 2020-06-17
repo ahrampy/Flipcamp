@@ -57,6 +57,7 @@
 
 .entry-form-sign-button {
     text-decoration: none;
+    background: white;
     color: #F6C270;
     border: 1px solid #F6C270;
     padding: 18px 20px;
@@ -93,6 +94,7 @@
 }
 
 #entry-form-switch-button {
+    background: white;
     color: #F6C270;
     border: none;
     padding: 4px;

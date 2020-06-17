@@ -33,16 +33,8 @@ class BookingsIndex extends React.Component {
           </div>
           <div>
             <span>
-              From{" "}
-              {booking.check_in
-                .slice(5)
-                .split("-")
-                .join("/")}{" "}
-              to{" "}
-              {booking.check_out
-                .slice(5)
-                .split("-")
-                .join("/")}
+              From {booking.check_in.slice(5).split("-").join("/")} to{" "}
+              {booking.check_out.slice(5).split("-").join("/")}
             </span>
             <br />
             <span>
@@ -75,8 +67,9 @@ class BookingsIndex extends React.Component {
         </div>
         <div>
           <button
-            onClick={() =>
-              this.props.destroyBooking(booking.id)
+            className="cancel-btn"
+            onClick={
+              () => this.props.destroyBooking(booking.id)
               // .then(() => this.props.history.push('/'))
             }
           >

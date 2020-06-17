@@ -40,8 +40,10 @@
 
 .nav-bar .btn{
     text-decoration: none;
+    background: white;
     color: #F6C270;
     border: 0px solid #F6C270;
+    border-radius: 2px;
     padding: 10px;
     margin: 0px 5px;
     transition-duration: 0.4s;
@@ -54,8 +56,10 @@
 
 .dropbtn {
     text-decoration: none;
+    background: white;
     color: #F6C270;
     border: 0px solid #F6C270;
+    border-radius: 2px 2px 0 0;
     padding: 10px;
     margin-top: 0px;
     transition-duration: 0.4s;
@@ -82,7 +86,6 @@
 }
 
 .links-content {
-    /* margin-top: 3px; */
     margin-left: -69px;
 }
 
