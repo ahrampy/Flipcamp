@@ -6,10 +6,10 @@ class BookingsIndex extends React.Component {
     super(props);
 
     this.state = {
-      bookings: this.props.bookings
+      bookings: this.props.bookings,
     };
-
     this.findSite = this.findSite.bind(this);
+    this.months = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
   }
 
   componentDidMount() {
@@ -19,9 +19,27 @@ class BookingsIndex extends React.Component {
 
   findSite(siteId, booking) {
     let foundSite = null;
-    this.props.sites.forEach(site => {
+    let startDate, endDate, cost;
+    this.props.sites.forEach((site) => {
       if (site.id === siteId) {
         foundSite = site;
+        startDate = booking.check_in.slice(5).split("-").join("/");
+        endDate = booking.check_out.slice(5).split("-").join("/");
+        let startMonth =
+          startDate.slice(0, 1) > 0
+            ? startDate.slice(0, 2)
+            : startDate.slice(1, 2);
+        let endMonth =
+          endDate.slice(0, 1) > 0 ? endDate.slice(0, 2) : endDate.slice(1, 2);
+        let startDay = startDate.slice(3, 5);
+        let endDay = endDate.slice(3, 5);
+        let dif =
+          startMonth === endMonth
+            ? endDay - startDay
+            : parseInt(this.months[startMonth]) -
+              parseInt(startDay) +
+              parseInt(endDay);
+        cost = (dif + 1) * foundSite.cost;
       }
     });
 
@@ -33,18 +51,10 @@ class BookingsIndex extends React.Component {
           </div>
           <div>
             <span>
-              From {booking.check_in.slice(5).split("-").join("/")} to{" "}
-              {booking.check_out.slice(5).split("-").join("/")}
+              From {startDate} to {` ${endDate}`}
             </span>
             <br />
-            <span>
-              Total cost: $
-              {Math.abs(
-                (parseInt(booking.check_out.slice(8)) -
-                  parseInt(booking.check_in.slice(8))) *
-                  parseInt(foundSite.cost)
-              )}
-            </span>
+            <span>Total cost: ${cost}</span>
           </div>
         </div>
         <div>
@@ -108,7 +118,7 @@ class BookingsIndex extends React.Component {
           <h2>Your Upcoming Stays</h2>
         </div>
         <div className="booking-index-stays">
-          {this.props.bookings.map(booking => {
+          {this.props.bookings.map((booking) => {
             if (booking.user_id === this.props.currentUser.id) {
               if (!sites.length) return null;
               return (
