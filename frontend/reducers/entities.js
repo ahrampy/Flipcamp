@@ -6,5 +6,5 @@ import reviewsReducer from "./reviews";
 export default combineReducers({
   sites: sitesReducer,
   bookings: bookingsReducer,
-  reviews: reviewsReducer
+  reviews: reviewsReducer,
 });

@@ -6,7 +6,7 @@ class SiteIndex extends React.Component {
     super(props);
     this.state = {
       searchParams: "",
-      searching: false
+      searching: false,
     };
     this.handleSearch = this.handleSearch.bind(this);
   }
@@ -45,7 +45,7 @@ class SiteIndex extends React.Component {
         </div>
         <div className="index-sites">
           {" "}
-          {this.props.sites.map(site => {
+          {this.props.sites.map((site) => {
             if (this.state.searching) {
               if (
                 !site.title.toLowerCase().includes(this.state.searchParams) &&
@@ -55,7 +55,7 @@ class SiteIndex extends React.Component {
               }
             }
             let booked = false;
-            this.props.bookings.forEach(booking => {
+            this.props.bookings.forEach((booking) => {
               if (this.props.currentUser) {
                 if (
                   booking.site_id === site.id &&

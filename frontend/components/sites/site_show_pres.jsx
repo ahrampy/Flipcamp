@@ -47,10 +47,10 @@ class SiteShow extends React.Component {
     window.removeEventListener("resize", this.checkMap);
   }
 
-  checkMap () {
-        this.setState({
-          mapSize: window.innerHeight - 328,
-        });
+  checkMap() {
+    this.setState({
+      mapSize: window.innerHeight - 328,
+    });
   }
 
   checkWidget() {

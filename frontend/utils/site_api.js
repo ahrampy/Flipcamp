@@ -1,26 +1,26 @@
 export const fetchSites = () =>
   $.ajax({
     method: "GET",
-    url: "api/sites"
+    url: "api/sites",
   });
 
-export const fetchSite = id =>
+export const fetchSite = (id) =>
   $.ajax({
     method: "GET",
-    url: `api/sites/${id}`
+    url: `api/sites/${id}`,
   });
 
-export const createSite = site =>
+export const createSite = (site) =>
   $.ajax({
     method: "POST",
     url: "api/sites",
-    site
+    site,
   });
 
-export const deleteSite = siteId =>
+export const deleteSite = (siteId) =>
   $.ajax({
     method: "DELETE",
-    url: `api/sites/${siteId}`
+    url: `api/sites/${siteId}`,
   });
 
 // export const createReview = review => (

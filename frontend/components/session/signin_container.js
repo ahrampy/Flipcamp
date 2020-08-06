@@ -4,13 +4,13 @@ import { signin } from "../../actions/session";
 import EntryForm from "./entry_form";
 import { openModal, closeModal } from "../../actions/modal";
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   errors: state.errors,
-  formType: "Sign In"
+  formType: "Sign In",
 });
 
-const mapDispatchToProps = dispatch => ({
-  action: user => dispatch(signin(user)),
+const mapDispatchToProps = (dispatch) => ({
+  action: (user) => dispatch(signin(user)),
   closeModal: () => dispatch(closeModal()),
   otherForm: (
     <button
@@ -19,7 +19,7 @@ const mapDispatchToProps = dispatch => ({
     >
       Sign Up
     </button>
-  )
+  ),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(EntryForm);

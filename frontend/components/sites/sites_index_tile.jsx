@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const SiteTile = props => {
+const SiteTile = (props) => {
   let booked = "";
 
   if (props.booked) {

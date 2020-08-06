@@ -1,7 +1,7 @@
 import {
   REMOVE_BOOKING,
   RECEIVE_BOOKINGS,
-  RECEIVE_BOOKING
+  RECEIVE_BOOKING,
 } from "../actions/bookings";
 
 const bookingsReducer = (state = {}, action) => {

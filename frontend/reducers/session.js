@@ -1,7 +1,7 @@
 import { RECEIVE_CURRENT_USER, SIGNOUT_CURRENT_USER } from "../actions/session";
 
 const _nullSession = {
-  currentUser: null
+  currentUser: null,
 };
 
 const SessionReducer = (state = _nullSession, action) => {
@@ -13,8 +13,8 @@ const SessionReducer = (state = _nullSession, action) => {
         {
           currentUser: {
             id: action.currentUser.id,
-            first_name: action.currentUser.first_name
-          }
+            first_name: action.currentUser.first_name,
+          },
         }
       );
       return nextState;
