@@ -270,7 +270,7 @@ class SiteShow extends React.Component {
             </div>
           </div>
 
-          <div className="site-show-widget-container">
+          <div id="site-show-widget-container">
             <div className="site-show-widget">
               <div className="site-show-widget-top-container">
                 <div className="site-show-widget-top-content">

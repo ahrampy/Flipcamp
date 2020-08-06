@@ -1,211 +1,212 @@
 .site-show-container {
-    font-family: "Calibre", Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    color: #333333;
+  font-family: "Calibre", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: #333333;
 }
 
 .site-show-img-container {
-    display: flex;
-    /* position: relative; */
-    justify-content: center;
-    background: #F6F1EE;
-    max-height: 600px;
-    width: 100%;
-    padding-top: 70px;
-    overflow: hidden;
+  display: flex;
+  /* position: relative; */
+  justify-content: center;
+  background: #f6f1ee;
+  max-height: 600px;
+  width: 100%;
+  padding-top: 70px;
+  overflow: hidden;
 }
 
 .site-show-main {
-    display: flex;
+  display: flex;
 }
 
-.site-show-widget-container {
-    display: inline-block;
-    position: relative;
-    bottom: 100px;
-    width: 30%;
+#site-show-widget-container {
+  display: inline-block;
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  width: 30%;
 }
 
 .site-show-widget {
-    background-color: white;
-    width: 308px;
-    margin-right: 100px;
-    border: 1px solid #F6F1EE;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.08);
+  background-color: white;
+  width: 308px;
+  margin-right: 100px;
+  border: 1px solid #f6f1ee;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
 }
 
 .site-show-widget-top-container {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    height: 70px;
-    width: 100%;
-    border-bottom: 1px solid #F6F1EE;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 70px;
+  width: 100%;
+  border-bottom: 1px solid #f6f1ee;
 }
 
 .site-show-widget-top-content {
-    padding-top: 10px;
-    padding-left: 15px;
+  padding-top: 10px;
+  padding-left: 15px;
 }
 
 .booking-form-container {
-    height: 80px;
+  height: 80px;
 }
 
 .site-show-widget-top-content h4 {
-    font-size: 25px;
+  font-size: 25px;
 }
 
 .site-show-widget-top-content p {
-    color: #F6C270;
-    font-size: 15px;
-    padding-top: 5px;
+  color: #f6c270;
+  font-size: 15px;
+  padding-top: 5px;
 }
 
 .site-show-widget-bottom-container {
-    height: 120px;
-    width: 100%;
+  height: 120px;
+  width: 100%;
 }
 
 .site-show-info-container {
-    display: inline-block;
-    position: relative;
-    min-height: 500px;
-    width: 60%;
-    margin-left: 10%;
-    padding-right: 50px;
+  display: inline-block;
+  position: relative;
+  min-height: 500px;
+  width: 60%;
+  margin-left: 10%;
+  padding-right: 50px;
 }
 
 .site-show-info-title h2 {
-    font-size: 40px;
-    padding: 20px;
-    padding-top: 30px;
+  font-size: 40px;
+  padding: 20px;
+  padding-top: 30px;
 }
 
 .site-show-info-descrition {
-    border-top: 1px solid #F6F1EE;
-    padding: 20px;
-    line-height: 1.42;
+  border-top: 1px solid #f6f1ee;
+  padding: 20px;
+  line-height: 1.42;
 }
 
 .site-show-cost {
-    font-size: 40px;
+  font-size: 40px;
 }
 
 .date-range-picker-container {
-    width: 100%;
+  width: 100%;
 }
 
 .site-show-info-cards-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    grid-column-gap: 40px;
-    grid-row-gap: 40px;
-    padding-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-column-gap: 40px;
+  grid-row-gap: 40px;
+  padding-top: 50px;
 }
 
 .site-show-info-card {
-    height: 260px;
-    width: 200px;
-    padding: 20px;
-    border: 1px solid #F6F1EE;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.08);
-    font-size: 15px;
-    line-height: 2rem;
+  height: 260px;
+  width: 200px;
+  padding: 20px;
+  border: 1px solid #f6f1ee;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+  font-size: 15px;
+  line-height: 2rem;
 }
 
 .site-card-title h3 {
-    font-size: 20px;
-    font-weight: 500;
-    margin-left: 10px;
-    padding-bottom: 10px;
+  font-size: 20px;
+  font-weight: 500;
+  margin-left: 10px;
+  padding-bottom: 10px;
 }
 
 .site-show-info-card img {
-    height: 30px;
-    width: 30px;
+  height: 30px;
+  width: 30px;
 }
 
 .site-show-info-details-container {
-    display: flex;
-    height: 200px;
-    border-top: 1px solid #F6F1EE;
-    margin-top: 40px;
-    padding-top: 20px;
-    line-height: 1.8;
-    font-size: 15px;
+  display: flex;
+  height: 200px;
+  border-top: 1px solid #f6f1ee;
+  margin-top: 40px;
+  padding-top: 20px;
+  line-height: 1.8;
+  font-size: 15px;
 }
 
 .site-show-info-details-container h3 {
-    font-size: 20px;
-    font-weight: 500;
+  font-size: 20px;
+  font-weight: 500;
 }
 
 .site-show-info-details-container li {
-    font-weight: bold;
-    padding-left: 100px;
+  font-weight: bold;
+  padding-left: 100px;
 }
 
 .site-show-info-details-container span {
-    font-weight: normal;
+  font-weight: normal;
 }
 
 .site-show-info-activities-container {
-    height: 240px;
-    border-top: 1px solid #F6F1EE;
-    padding-top: 20px;
-    line-height: 1.8;
-    font-size: 15px;
+  height: 240px;
+  border-top: 1px solid #f6f1ee;
+  padding-top: 20px;
+  line-height: 1.8;
+  font-size: 15px;
 }
 
 .site-show-info-activities-container h3 {
-    font-size: 20px;
-    font-weight: 500;
-    padding-bottom: 30px;
+  font-size: 20px;
+  font-weight: 500;
+  padding-bottom: 30px;
 }
 
 .site-show-info-activities-container ul {
-    display: flex;
+  display: flex;
 }
 
 .site-show-info-activities-container li {
-    text-align: center;
-    font-weight: bold;
-    padding: 10px;
+  text-align: center;
+  font-weight: bold;
+  padding: 10px;
 }
 
 .site-show-info-activities-container img {
-    height: 100px;
-    width: 100px;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  height: 100px;
+  width: 100px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .site-show-info-terrain-container {
-    height: 240px;
-    border-top: 1px solid #F6F1EE;
-    padding-top: 20px;
-    line-height: 1.8;
-    font-size: 15px;
+  height: 240px;
+  border-top: 1px solid #f6f1ee;
+  padding-top: 20px;
+  line-height: 1.8;
+  font-size: 15px;
 }
 
 .site-show-info-terrain-container h3 {
-    font-size: 20px;
-    font-weight: 500;
-    padding-bottom: 30px;
+  font-size: 20px;
+  font-weight: 500;
+  padding-bottom: 30px;
 }
 
 .site-show-info-terrain-container ul {
-    display: flex;
+  display: flex;
 }
 
 .site-show-info-terrain-container li {
-    text-align: center;
-    font-weight: bold;
-    padding: 10px;
+  text-align: center;
+  font-weight: bold;
+  padding: 10px;
 }
 
 .site-show-info-terrain-container img {
-    height: 100px;
-    width: 100px;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  height: 100px;
+  width: 100px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
