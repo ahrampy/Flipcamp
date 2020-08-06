@@ -19,12 +19,12 @@
   display: flex;
 }
 
-#site-show-widget-container {
-  display: inline-block;
+.site-show-widget-container {
+  /* display: inline-block;
   position: absolute;
   right: 0px;
   bottom: 0px;
-  width: 30%;
+  width: 30%; */
 }
 
 .site-show-widget {

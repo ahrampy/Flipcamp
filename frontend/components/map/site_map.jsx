@@ -8,7 +8,7 @@ class SiteMap extends React.Component {
   componentDidMount() {
     const mapOptions = {
       center: { lat: this.props.lat, lng: this.props.lng },
-      zoom: 12
+      zoom: 12,
     };
 
     this.map = new google.maps.Map(this.mapNode, mapOptions);
@@ -32,12 +32,12 @@ class SiteMap extends React.Component {
       fillOpacity: 0.4,
       map: this.map,
       center: { lat: this.props.lat, lng: this.props.lng },
-      radius: 2000
+      radius: 2000,
     });
   }
 
   render() {
-    return <div id="widget-map" ref={map => (this.mapNode = map)}></div>;
+    return <div id="widget-map" ref={(map) => (this.mapNode = map)}></div>;
   }
 }
 

@@ -6,10 +6,18 @@ import SiteMap from "../map/site_map";
 class SiteShow extends React.Component {
   constructor(props) {
     super(props);
+    this.bookWidget = React.createRef();
+    this.checkWidget = this.checkWidget.bind(this);
+    this.state = {
+      mapSize: 0,
+    };
   }
 
   componentDidMount() {
     window.scrollTo(0, 0);
+    window.addEventListener("scroll", this.checkWidget);
+    this.setState({ mapSize: window.innerHeight - 328 });
+
     if (!this.props.site) {
       this.props.fetchSite(this.props.match.params.siteId);
     }
@@ -19,12 +27,48 @@ class SiteShow extends React.Component {
     if (!this.props.reviews.length) {
       this.props.fetchReviews();
     }
+
+    // let mapWidget = .getElementsByClassName("site-show-widget-container");
+    // console.log(mapWidget);
+    // let distTop = mapWidget.offsetTop
+    // let mapSize = window.height // - $mapWidget.height() - 135;
+    console.log(window.innerHeight - 135);
+    console.log(this.state.mapSize);
   }
 
   componentDidUpdate(prevProps) {
     if (this.props.reviews.length !== prevProps.reviews.length) {
       this.props.fetchReviews();
     }
+
+    // $(window).scroll(function (e) {
+    //   var $bookWidget = $("#site-show-widget-container");
+    //   var isPositionFixed = $bookWidget.css("position") == "fixed";
+    //   if ($(this).scrollTop() > this.distTop && !isPositionFixed) {
+    //     $bookWidget.css({ position: "fixed", top: "75px", bottom: "" });
+    //   }
+    //   if ($(this).scrollTop() < this.distTop && isPositionFixed) {
+    //     $bookWidget.css({ position: "absolute", top: "", bottom: "0px" });
+    //   }
+    // });
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("scroll", this.checkWidget);
+  }
+
+  checkWidget() {
+    // let isFixed = this.bookWidget.current.style.position == "fixed";
+    // if (!isFixed) {
+    //   this.bookWidget.current.style.position = "fixed";
+    //   this.bookWidget.current.style.top = "75px";
+    //   this.bookWidget.current.style.bottom = "";
+    // }
+    // if (isFixed) {
+    //   this.bookWidget.current.style.position = "absolute";
+    //   this.bookWidget.current.style.top = "";
+    //   this.bookWidget.current.style.bottom = "0px";
+    // }
   }
 
   render() {
@@ -40,7 +84,7 @@ class SiteShow extends React.Component {
       img,
       description,
       lat,
-      lng
+      lng,
     } = this.props.site;
 
     return (
@@ -217,7 +261,7 @@ class SiteShow extends React.Component {
             <div className="site-show-reviews-container">
               <h3>Reviews</h3>
               <div className="site-show-reviews">
-                {this.props.reviews.map(review => {
+                {this.props.reviews.map((review) => {
                   // const created_at = review.created_at.slice(0, 10);
                   if (review.site_id === id) {
                     return (
@@ -234,9 +278,7 @@ class SiteShow extends React.Component {
                               )}
                             </h4>
                           </div>
-                          {/* <div className='review-date'>
-                                                    <span>{created_at}</span>
-                                                </div> */}
+                          {/* <div className='review-date'> <span>{created_at}</span> </div> */}
                         </div>
                         <div className="review-body">
                           {review.body}
@@ -270,7 +312,17 @@ class SiteShow extends React.Component {
             </div>
           </div>
 
-          <div id="site-show-widget-container">
+          <div
+            className="site-show-widget-container"
+            ref={this.bookWidget}
+            style={{
+              display: "inline-block",
+              position: "absolute",
+              right: "0px",
+              bottom: "0px",
+              width: "30%",
+            }}
+          >
             <div className="site-show-widget">
               <div className="site-show-widget-top-container">
                 <div className="site-show-widget-top-content">
@@ -293,7 +345,10 @@ class SiteShow extends React.Component {
                     />
                   </div>
                 </div>
-                <div className="site-show-widget-map-container">
+                <div
+                  className="site-show-widget-map-container"
+                  style={{ height: `${this.state.mapSize}px` }}
+                >
                   <SiteMap lng={lng} lat={lat} />
                 </div>
               </div>

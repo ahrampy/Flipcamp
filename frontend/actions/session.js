@@ -4,31 +4,31 @@ export const RECEIVE_CURRENT_USER = "RECEIVE_CURRENT_USER";
 export const SIGNOUT_CURRENT_USER = "SIGNOUT_CURRENT_USER";
 export const RECEIVE_SESSION_ERRORS = "RECEIVE_SESSION_ERRORS";
 
-const receiveCurrentUser = currentUser => ({
+const receiveCurrentUser = (currentUser) => ({
   type: RECEIVE_CURRENT_USER,
-  currentUser
+  currentUser,
 });
 
 const signoutCurrentUser = () => ({
-  type: SIGNOUT_CURRENT_USER
+  type: SIGNOUT_CURRENT_USER,
 });
 
-const receiveErrors = errors => ({
+const receiveErrors = (errors) => ({
   type: RECEIVE_SESSION_ERRORS,
-  errors
+  errors,
 });
 
-export const signup = user => dispatch =>
+export const signup = (user) => (dispatch) =>
   APIUtil.signup(user).then(
-    user => dispatch(receiveCurrentUser(user)),
-    err => dispatch(receiveErrors(err.responseJSON))
+    (user) => dispatch(receiveCurrentUser(user)),
+    (err) => dispatch(receiveErrors(err.responseJSON))
   );
 
-export const signin = user => dispatch =>
+export const signin = (user) => (dispatch) =>
   APIUtil.signin(user).then(
-    data => dispatch(receiveCurrentUser(data)),
-    err => dispatch(receiveErrors(err.responseJSON))
+    (data) => dispatch(receiveCurrentUser(data)),
+    (err) => dispatch(receiveErrors(err.responseJSON))
   );
 
-export const signout = () => dispatch =>
+export const signout = () => (dispatch) =>
   APIUtil.signout().then(() => dispatch(signoutCurrentUser()));
