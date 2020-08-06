@@ -9,14 +9,17 @@ class SiteShow extends React.Component {
     this.bookWidget = React.createRef();
     this.checkWidget = this.checkWidget.bind(this);
     this.state = {
-      mapSize: 0,
+      mapSize: null,
+      distTop: null,
+      widgetPos: "absolute",
+      widgetTop: "",
+      widgetBottom: "0px",
     };
   }
 
   componentDidMount() {
     window.scrollTo(0, 0);
     window.addEventListener("scroll", this.checkWidget);
-    this.setState({ mapSize: window.innerHeight - 328 });
 
     if (!this.props.site) {
       this.props.fetchSite(this.props.match.params.siteId);
@@ -28,29 +31,15 @@ class SiteShow extends React.Component {
       this.props.fetchReviews();
     }
 
-    // let mapWidget = .getElementsByClassName("site-show-widget-container");
-    // console.log(mapWidget);
-    // let distTop = mapWidget.offsetTop
-    // let mapSize = window.height // - $mapWidget.height() - 135;
-    console.log(window.innerHeight - 135);
-    console.log(this.state.mapSize);
+    this.setState({
+      mapSize: window.innerHeight - 328,
+    });
   }
 
   componentDidUpdate(prevProps) {
     if (this.props.reviews.length !== prevProps.reviews.length) {
       this.props.fetchReviews();
     }
-
-    // $(window).scroll(function (e) {
-    //   var $bookWidget = $("#site-show-widget-container");
-    //   var isPositionFixed = $bookWidget.css("position") == "fixed";
-    //   if ($(this).scrollTop() > this.distTop && !isPositionFixed) {
-    //     $bookWidget.css({ position: "fixed", top: "75px", bottom: "" });
-    //   }
-    //   if ($(this).scrollTop() < this.distTop && isPositionFixed) {
-    //     $bookWidget.css({ position: "absolute", top: "", bottom: "0px" });
-    //   }
-    // });
   }
 
   componentWillUnmount() {
@@ -58,17 +47,26 @@ class SiteShow extends React.Component {
   }
 
   checkWidget() {
-    // let isFixed = this.bookWidget.current.style.position == "fixed";
-    // if (!isFixed) {
-    //   this.bookWidget.current.style.position = "fixed";
-    //   this.bookWidget.current.style.top = "75px";
-    //   this.bookWidget.current.style.bottom = "";
-    // }
-    // if (isFixed) {
-    //   this.bookWidget.current.style.position = "absolute";
-    //   this.bookWidget.current.style.top = "";
-    //   this.bookWidget.current.style.bottom = "0px";
-    // }
+    if (this.bookWidget.current) {
+      if (this.state.distTop === null) {
+        this.setState({ distTop: this.bookWidget.current.offsetTop - 75 });
+      }
+      let height = window.pageYOffset;
+      let isFixed = this.state.widgetPos === "fixed";
+      if (!isFixed && this.state.distTop < height) {
+        this.setState({
+          widgetPos: "fixed",
+          widgetTop: "75px",
+          widgetBottom: "",
+        });
+      } else if (isFixed && this.state.distTop > height) {
+        this.setState({
+          widgetPos: "absolute",
+          widgetTop: "",
+          widgetBottom: "0px",
+        });
+      }
+    }
   }
 
   render() {
@@ -316,10 +314,11 @@ class SiteShow extends React.Component {
             className="site-show-widget-container"
             ref={this.bookWidget}
             style={{
-              display: "inline-block",
-              position: "absolute",
+              // display: "inline-block",
+              position: this.state.widgetPos,
+              top: this.state.widgetTop,
+              bottom: this.state.widgetBottom,
               right: "0px",
-              bottom: "0px",
               width: "30%",
             }}
           >
