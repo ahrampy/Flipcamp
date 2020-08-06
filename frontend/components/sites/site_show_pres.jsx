@@ -6,8 +6,9 @@ import SiteMap from "../map/site_map";
 class SiteShow extends React.Component {
   constructor(props) {
     super(props);
-    this.bookWidget = React.createRef();
     this.checkWidget = this.checkWidget.bind(this);
+    this.checkMap = this.checkMap.bind(this);
+    this.bookWidget = React.createRef();
     this.state = {
       mapSize: null,
       distTop: null,
@@ -20,6 +21,7 @@ class SiteShow extends React.Component {
   componentDidMount() {
     window.scrollTo(0, 0);
     window.addEventListener("scroll", this.checkWidget);
+    window.addEventListener("resize", this.checkMap);
 
     if (!this.props.site) {
       this.props.fetchSite(this.props.match.params.siteId);
@@ -31,9 +33,7 @@ class SiteShow extends React.Component {
       this.props.fetchReviews();
     }
 
-    this.setState({
-      mapSize: window.innerHeight - 328,
-    });
+    this.checkMap();
   }
 
   componentDidUpdate(prevProps) {
@@ -44,6 +44,13 @@ class SiteShow extends React.Component {
 
   componentWillUnmount() {
     window.removeEventListener("scroll", this.checkWidget);
+    window.removeEventListener("resize", this.checkMap);
+  }
+
+  checkMap () {
+        this.setState({
+          mapSize: window.innerHeight - 328,
+        });
   }
 
   checkWidget() {
