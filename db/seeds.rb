@@ -104,6 +104,18 @@ site6 = Site.create!(
     description: 'Santa Catalina, one of California’s Channel Islands, lies southwest of Los Angeles. It is known for its wildlife, dive sites and Mt. Orizaba, its highest peak. The resort town of Two Harbors lies to the north. To the south, in the city of Avalon, palm trees and cabanas line Descanso Beach. Avalon’s circular, art deco Catalina Casino is a cultural center with a movie theater, ballroom and museum.'
 )
 
+site6 = Site.create!(
+    user_id: demo.id,
+    title: 'Big Sur',
+    lat: 36.271862,
+    lng: -121.800190,
+    site_type: 'RV',
+    cost: 40,
+    max_guests: 4,
+    img: '/site_imgs/10-16.jpg',
+    description: 'Big Sur is a rugged stretch of California’s central coast between Carmel and San Simeon. Bordered to the east by the Santa Lucia Mountains and the west by the Pacific Ocean, it’s traversed by narrow, 2-lane State Route 1, known for winding turns, seaside cliffs and views of the often-misty coastline. The sparsely populated region has numerous state parks for hiking, camping and beachcombing.'
+)
+
 booking1 = Booking.create!(
     site_id: site1.id,
     user_id: demo.id,
