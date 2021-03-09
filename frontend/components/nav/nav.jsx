@@ -62,9 +62,8 @@ class Nav extends React.Component {
               </div>
             </Link>
           </div>
-          {/* {search} moved to homepage*/} 
+          {/* {search} moved to homepage*/}
           <div className="nav-buttons">
-            {buttons}
             <div className="dropdown">
               <button className="dropbtn links">
                 <img id="link-icon" src="/link_icons/tent.png" alt="tent" />
@@ -92,6 +91,7 @@ class Nav extends React.Component {
                 </a>
               </div>
             </div>
+            {buttons}
           </div>
         </div>
       </header>
