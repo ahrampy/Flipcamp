@@ -95,9 +95,7 @@ class SiteShow extends React.Component {
     return (
       <div className="site-show-container">
         <div className="site-show-img-container">
-          <div className="site-show-img">
-            <img src={img} alt="site-picture" />
-          </div>
+          <img className="site-show-img" src={img} alt="site-picture" />
         </div>
         <div className="site-show-main">
           <div className="site-show-info-container">

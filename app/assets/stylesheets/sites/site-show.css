@@ -6,26 +6,25 @@
 
 .site-show-img-container {
   display: flex;
-  /* position: relative; */
   justify-content: center;
   background: #f6f1ee;
   max-height: 600px;
-  width: 100%;
   padding-top: 70px;
   overflow: hidden;
+  /* object-fit: cover; */
 }
 
 .site-show-main {
   display: flex;
 }
 
-.site-show-widget-container {
-  /* display: inline-block;
+/* .site-show-widget-container {
+  display: inline-block;
   position: absolute;
   right: 0px;
   bottom: 0px;
-  width: 30%; */
-}
+  width: 30%;
+} */
 
 .site-show-widget {
   background-color: white;
