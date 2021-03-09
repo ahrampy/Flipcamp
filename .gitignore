@@ -28,3 +28,10 @@
 
 bundle.js
 bundle.js.map
+
+# Ignore temp stores
+
+.DS_Store
+app/.DS_Store
+lib/.DS_Store
+public/.DS_Store
