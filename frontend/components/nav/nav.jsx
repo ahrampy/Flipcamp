@@ -62,7 +62,7 @@ class Nav extends React.Component {
               </div>
             </Link>
           </div>
-          {/* {search} */}
+          {/* {search} moved to homepage*/} 
           <div className="nav-buttons">
             {buttons}
             <div className="dropdown">
