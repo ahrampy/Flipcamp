@@ -28,7 +28,7 @@ Flipcamp uses standard Ruby on Rails authorization pattern with BCrypt's secure 
 
 <img src="https://i.imgur.com/FEUdfv2.png"/>
 
-```ruby
+<!-- ```ruby
 class User < ApplicationRecord
 
     validates :email, presence: true, uniqueness: true
@@ -68,7 +68,7 @@ class User < ApplicationRecord
 
 end
 
-```
+``` -->
 
 ### Front Page
 
@@ -84,7 +84,7 @@ Flipcamp displays all relevant information a prospective camper may want to know
 
 With an implementation of react-dates and its two-month spread build, users can select a start date and an end date for their camping trip in a fluid set opf clicks, without clicking away to select different dropdowns or pages.
 
-```javascript
+<!-- ```javascript
 return (
     <div className='booking-form-container'>
         <form onSubmit={this.handleSubmit} className='booking-form'>
@@ -120,7 +120,7 @@ return (
         </form>
     </div>
 );
-```
+``` -->
 
 #### Information
 
@@ -144,7 +144,7 @@ See where your campsite is, and once you've booked it, get directions straight t
   <img width="370" height="320" src="https://i.imgur.com/mtqDZ1f.png"/>
 </p>
 
-```javascript
+<!-- ```javascript
 import React from 'react';
 
 class SiteMap extends React.Component {
@@ -181,7 +181,7 @@ class SiteMap extends React.Component {
 };
 
 export default SiteMap;
-```
+``` -->
 
 ## Future Plans and Implementations
 
